@@ -1,0 +1,40 @@
+
+
+首先是5000时钟的fft_reset为高电平时，fft和w_ram会进入等待状态，fft等待ad结束产生done信号，w_ram则会等待done信号然后产生ram_done信号，
+fft_reset接收到ram_done信号后，产生五个时钟低电平，此时fft和w_ram复位，重新进行上一次的循环，直到fft_reset产生reset_done信号，结束程序。
+
+top(ad_fft)
+中的top是14路ad_fft程序，ad程序在上电后就一直运行，注意ad信号上电后有4000时钟的复位时间，复位结束后才开始采样。
+其中的fft_reset为低电平时开始一次fft运算，输出一次结果。当done信号为高电平时（持续5个周期）表明fft结束。
+
+pinredistribution:重新分配引脚，多出六路继电器引脚
+
+w_ram
+开始根据fft_reset来清零，然后判断done信号开始写，写时会用到reset_i的乘法，一次写结束后判断reset_done是否结束，未结束则重新写，结束则根据choise进行写
+ram_done一次写完成后为高电平，直到fft_reset为低电平时复位
+
+
+r_ram
+对ram的前十个地址进行反复读。
+
+
+reset
+发出reset信号，开始时有3个单位的低电平，用于复位信号
+
+
+
+fft_reset
+fft_reset   每过一段时间，置0一次，表示重启一次fft和w_ram
+reset_done  表示全部结束全部结束，因为要在一次写完后查看是否完成，所以设置为常为1时，表示结束
+[2:0] choise   1单阻？2双阻？3单容？4双容？
+[5:0]reset_i      表示这是第几次fft，确定ram位置 最多56次
+
+
+fft_reset1  具体流程图看visio文件 fft_reset流程图  
+fft_reset   每过一段时间，置0一次，表示重启一次fft和w_ram
+reset_done  表示全部结束全部结束，因为要在一次写完后查看是否完成，所以设置为常为1时，表示结束
+[2:0] choise   1单阻？2双阻？3单容？4双容？
+[5:0]reset_i      表示这是第几次fft，确定ram位置 最多56次
+[14:0] relay       15路继电器控制程序
+
+

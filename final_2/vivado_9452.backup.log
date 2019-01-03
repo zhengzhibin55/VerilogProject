@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun May 27 15:50:53 2018
+# Process ID: 9452
+# Current directory: D:/FPGA/V_project/final_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8596 D:\FPGA\V_project\final_2\lcd7_touch.xpr
+# Log file: D:/FPGA/V_project/final_2/vivado.log
+# Journal file: D:/FPGA/V_project/final_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/V_project/final_2/lcd7_touch.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/V_project/final_2/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/V_project/IP/ad_fft'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/V_project/IP/reset'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/V_project/IP/w_ram'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/V_project/IP/r_ram'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/V_project/IP/fft_reset1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/FPGA/V_project/IP/pwm'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 906.184 ; gain = 253.258
+open_bd_design {D:/FPGA/V_project/final_2/lcd7_touch.srcs/sources_1/bd/system/system.bd}
+Adding component instance block -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:user:pwm:1.0 - pwm_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_1
+Adding component instance block -- xilinx.com:user:r_ram:1.0 - r_ram_0
+Adding component instance block -- xilinx.com:user:w_ram:1.0 - w_ram_0
+Adding component instance block -- xilinx.com:user:reset:1.0 - reset_0
+Adding component instance block -- xilinx.com:user:ad_fft:1.0 - ad_fft_0
+Adding component instance block -- xilinx.com:user:fft_reset1:1.0 - fft_reset1_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <D:/FPGA/V_project/final_2/lcd7_touch.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1059.176 ; gain = 151.223
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 27 16:00:22 2018...

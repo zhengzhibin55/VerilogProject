@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <math.h>
+#include "xil_io.h"   //这个头文件下面包含很重要的IO读写函数
+
+#include "xparameters.h"  //这个头文件里把硬件的地址映射等参数都写成了宏定义方便使用
+
+
+
+int main()
+
+{
+
+       u16 num;
+
+       s32 a;   //a+bi
+	   s32 b;   //a+bi
+	   float c;  //幅值
+	   float d;  //相位
+
+
+    xil_printf("------The test is start...------\n\r");
+
+
+    //XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR是axi_bram_ctrl_1的地址，Xil_In32 通过控制axi_bram_ctrl_0，把blk_mem_gen_0里的数据读出来
+    //PS和PL可以在blk_mem_gen_0里共享数据
+	//每一个单位存储8位，因此4个存储单位才能存储一个32的数
+	num=0;
+
+	Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 7000, 0x0f0f0f02);
+
+	while(num==0)
+	{
+		a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+		if(a==0xF0F0F0F2)
+		{
+			num=1;
+		}
+	}
+
+
+   for( num=1; num<340; num++ )
+       {
+            a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + num*4);
+
+            printf( "%d \n", a);
+
+       }
+
+
+
+
+   a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);     //停止位
+   xil_printf( "The data at %d is %x \n\r", num,a);
+
+
+   //XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR是axi_bram_ctrl_0的地址，Xil_Out32通过控制axi_bram_ctrl_0，向blk_mem_gen_0写数据
+
+
+    xil_printf("------The test is end!------\n\r");
+
+    return 0;
+
+}

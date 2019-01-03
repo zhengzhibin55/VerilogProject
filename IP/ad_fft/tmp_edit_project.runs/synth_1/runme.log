@@ -1,0 +1,1173 @@
+
+*** Running vivado
+    with args -log ad_fft.vds -m64 -mode batch -messageDb vivado.pb -notrace -source ad_fft.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source ad_fft.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+Command: synth_design -top ad_fft -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 504.391 ; gain = 332.133
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ad_fft' [D:/FPGA/V_project/IP/ad_fft/src/ad_fft.v:22]
+INFO: [Synth 8-638] synthesizing module 'ad14' [D:/FPGA/V_project/IP/ad_fft/src/ad14.v:21]
+INFO: [Synth 8-638] synthesizing module 'ad1' [D:/FPGA/V_project/IP/ad_fft/src/ad1.v:21]
+INFO: [Synth 8-256] done synthesizing module 'ad1' (1#1) [D:/FPGA/V_project/IP/ad_fft/src/ad1.v:21]
+INFO: [Synth 8-638] synthesizing module 'ad2' [D:/FPGA/V_project/IP/ad_fft/src/ad2.v:21]
+INFO: [Synth 8-256] done synthesizing module 'ad2' (2#1) [D:/FPGA/V_project/IP/ad_fft/src/ad2.v:21]
+INFO: [Synth 8-256] done synthesizing module 'ad14' (3#1) [D:/FPGA/V_project/IP/ad_fft/src/ad14.v:21]
+WARNING: [Synth 8-350] instance 'f1' of module 'ad14' requires 30 connections, but only 28 given [D:/FPGA/V_project/IP/ad_fft/src/ad_fft.v:170]
+INFO: [Synth 8-638] synthesizing module 'fft14' [D:/FPGA/V_project/IP/ad_fft/src/fft14.v:23]
+INFO: [Synth 8-638] synthesizing module 'fft1' [D:/FPGA/V_project/IP/ad_fft/src/fft1.v:22]
+INFO: [Synth 8-638] synthesizing module 'xfft_1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_1/synth/xfft_1.vhd:84]
+INFO: [Synth 8-3491] module 'xfft_v9_0_9' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0.vhd:121' bound to instance 'U0' of component 'xfft_v9_0_9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_1/synth/xfft_1.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'xfft_v9_0_9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0.vhd:201]
+INFO: [Synth 8-3491] module 'xfft_v9_0_9_viv' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:100914' bound to instance 'i_synth' of component 'xfft_v9_0_9_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'xfft_v9_0_9_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101006]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:848]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:864]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:870]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:875]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:879]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:884]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:889]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:894]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:899]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:903]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:908]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:913]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:918]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:929]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:937]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:942]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:959]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:962]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:966]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:969]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:973]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:977]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1017]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1032]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1038]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1050]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1056]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1061]
+INFO: [Synth 8-638] synthesizing module 'axi_wrapper' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92184]
+INFO: [Synth 8-638] synthesizing module 'axi_wrapper_input_fifo' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:91328]
+INFO: [Synth 8-638] synthesizing module 'glb_ifx_slave' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2905]
+INFO: [Synth 8-3491] module 'glb_srl_fifo' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2422' bound to instance 'fifo0' of component 'glb_srl_fifo' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2938]
+INFO: [Synth 8-638] synthesizing module 'glb_srl_fifo' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+INFO: [Synth 8-256] done synthesizing module 'glb_srl_fifo' (4#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+INFO: [Synth 8-256] done synthesizing module 'glb_ifx_slave' (5#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2905]
+INFO: [Synth 8-256] done synthesizing module 'axi_wrapper_input_fifo' (6#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:91328]
+INFO: [Synth 8-638] synthesizing module 'axi_wrapper_input_fifo__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:91328]
+INFO: [Synth 8-638] synthesizing module 'glb_ifx_slave__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2905]
+INFO: [Synth 8-3491] module 'glb_srl_fifo' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2422' bound to instance 'fifo0' of component 'glb_srl_fifo' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2938]
+INFO: [Synth 8-638] synthesizing module 'glb_srl_fifo__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+INFO: [Synth 8-256] done synthesizing module 'glb_srl_fifo__parameterized1' (6#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+INFO: [Synth 8-256] done synthesizing module 'glb_ifx_slave__parameterized0' (6#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2905]
+INFO: [Synth 8-256] done synthesizing module 'axi_wrapper_input_fifo__parameterized0' (6#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:91328]
+INFO: [Synth 8-226] default block is never used [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93959]
+INFO: [Synth 8-226] default block is never used [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:94020]
+INFO: [Synth 8-638] synthesizing module 'axi_wrapper_output_fifo' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:91736]
+INFO: [Synth 8-638] synthesizing module 'glb_ifx_master' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:3098]
+INFO: [Synth 8-3491] module 'glb_srl_fifo' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2422' bound to instance 'fifo0' of component 'glb_srl_fifo' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:3134]
+INFO: [Synth 8-638] synthesizing module 'glb_srl_fifo__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+INFO: [Synth 8-256] done synthesizing module 'glb_srl_fifo__parameterized3' (6#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+INFO: [Synth 8-256] done synthesizing module 'glb_ifx_master' (7#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:3098]
+INFO: [Synth 8-256] done synthesizing module 'axi_wrapper_output_fifo' (8#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:91736]
+WARNING: [Synth 8-3848] Net m_axis_status_tdata in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92010]
+WARNING: [Synth 8-3848] Net m_axis_status_tvalid in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92011]
+WARNING: [Synth 8-3848] Net config_fifo_out_cp_len in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92276]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch0 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92289]
+WARNING: [Synth 8-3848] Net config_fifo_out_fwd_inv7 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92284]
+WARNING: [Synth 8-3848] Net config_fifo_out_fwd_inv8 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92285]
+WARNING: [Synth 8-3848] Net config_fifo_out_fwd_inv9 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92286]
+WARNING: [Synth 8-3848] Net config_fifo_out_fwd_inv10 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92287]
+WARNING: [Synth 8-3848] Net config_fifo_out_fwd_inv11 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92288]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch1 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92290]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch2 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92291]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch3 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92292]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch4 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92293]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch5 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92294]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch6 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92295]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch7 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92296]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch8 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92297]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch9 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92298]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch10 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92299]
+WARNING: [Synth 8-3848] Net config_fifo_out_scale_sch11 in module/entity axi_wrapper does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92300]
+INFO: [Synth 8-256] done synthesizing module 'axi_wrapper' (9#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:92184]
+INFO: [Synth 8-638] synthesizing module 'xfft_v9_0_9_core' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:100039]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:848]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:864]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:870]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:875]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:879]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:884]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:889]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:894]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:899]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:903]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:908]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:913]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:918]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:929]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:937]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:942]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:959]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:962]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:966]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:969]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:973]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:977]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1017]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1032]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1038]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1050]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1056]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:1061]
+INFO: [Synth 8-638] synthesizing module 'xfft_v9_0_9_e' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:98219]
+INFO: [Synth 8-638] synthesizing module 'so_control' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84671]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84721]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84728]
+INFO: [Synth 8-638] synthesizing module 'shift_ram' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:586]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:589]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:590]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:591]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:592]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:594]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:595]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:596]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:597]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:598]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:599]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:600]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:601]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:602]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:604]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:612]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:615]
+INFO: [Common 17-14] Message 'Synth 8-312' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy' (10#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv' (11#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram' (12#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'so_control_fsm' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84272]
+INFO: [Synth 8-113] binding component instance 'reg0' to cell 'FDSE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84441]
+INFO: [Synth 8-113] binding component instance 'reg1' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84450]
+INFO: [Synth 8-113] binding component instance 'reg2' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84459]
+INFO: [Synth 8-113] binding component instance 'reg3' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84468]
+INFO: [Synth 8-113] binding component instance 'reg4' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84477]
+INFO: [Synth 8-256] done synthesizing module 'so_control_fsm' (13#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84272]
+INFO: [Synth 8-638] synthesizing module 'so_addr_gen' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:83848]
+INFO: [Synth 8-638] synthesizing module 'so_n_counter' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68870]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68900]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5542' bound to instance 'i_baseblox_addsub' of component 'c_addsub_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6636]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_fabric_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5278' bound to instance 'the_addsub' of component 'c_addsub_v12_0_8_fabric_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5909]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_fabric_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_lut6_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2291' bound to instance 'i_lut6_addsub' of component 'c_addsub_v12_0_8_lut6_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5347]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_lut6_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-113] binding component instance 'carrymux0' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3264]
+INFO: [Synth 8-113] binding component instance 'carryxor0' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3272]
+INFO: [Synth 8-113] binding component instance 'carryxortop' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3284]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_lut6_legacy' (14#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_fabric_legacy' (15#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_legacy' (16#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_viv' (17#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'addsub_reg' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68970]
+INFO: [Synth 8-113] binding component instance 'and03' to cell 'LUT3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73842]
+INFO: [Synth 8-113] binding component instance 'ce_lut0' to cell 'LUT3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73850]
+INFO: [Synth 8-113] binding component instance 'sclr_lut0' to cell 'LUT4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73858]
+INFO: [Synth 8-113] binding component instance 'and13' to cell 'LUT3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73868]
+INFO: [Synth 8-113] binding component instance 'ce_lut1' to cell 'LUT3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73876]
+INFO: [Synth 8-113] binding component instance 'sclr_lut1' to cell 'LUT4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73884]
+INFO: [Synth 8-113] binding component instance 'and23' to cell 'LUT3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73894]
+INFO: [Synth 8-113] binding component instance 'ce_lut2' to cell 'LUT3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73902]
+INFO: [Synth 8-113] binding component instance 'sclr_lut2' to cell 'LUT4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:73910]
+INFO: [Synth 8-113] binding component instance 'mux00' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74694]
+INFO: [Synth 8-113] binding component instance 'mux01' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74700]
+INFO: [Synth 8-113] binding component instance 'mux02' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74706]
+INFO: [Synth 8-113] binding component instance 'mux03' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74712]
+INFO: [Synth 8-113] binding component instance 'fast_xor0' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74718]
+INFO: [Synth 8-113] binding component instance 'mux10' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74724]
+INFO: [Synth 8-113] binding component instance 'mux11' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74730]
+INFO: [Synth 8-113] binding component instance 'mux12' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74736]
+INFO: [Synth 8-113] binding component instance 'mux13' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74742]
+INFO: [Synth 8-113] binding component instance 'fast_xor1' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74748]
+INFO: [Synth 8-113] binding component instance 'mux20' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74754]
+INFO: [Synth 8-113] binding component instance 'mux21' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74760]
+INFO: [Synth 8-113] binding component instance 'mux22' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74766]
+INFO: [Synth 8-113] binding component instance 'mux23' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74772]
+INFO: [Synth 8-113] binding component instance 'fast_xor2' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74778]
+INFO: [Synth 8-113] binding component instance 'n_count_max_i_reg' to cell 'FD' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74896]
+INFO: [Synth 8-113] binding component instance 'n_count_max_early_reg' to cell 'FD' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74904]
+INFO: [Synth 8-113] binding component instance 'n_count_max_4_cycles_early_reg' to cell 'FD' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:74912]
+INFO: [Synth 8-256] done synthesizing module 'so_n_counter' (18#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:68870]
+INFO: [Synth 8-638] synthesizing module 'so_run_addr_gen' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82372]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82417]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82427]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82428]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82430]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82431]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82432]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82433]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_viv__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5542' bound to instance 'i_baseblox_addsub' of component 'c_addsub_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6636]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_legacy__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_fabric_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5278' bound to instance 'the_addsub' of component 'c_addsub_v12_0_8_fabric_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5909]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_lut6_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2291' bound to instance 'i_lut6_addsub' of component 'c_addsub_v12_0_8_lut6_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5347]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-113] binding component instance 'carrymux0' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3264]
+INFO: [Synth 8-113] binding component instance 'carryxor0' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3272]
+INFO: [Synth 8-113] binding component instance 'carryxortop' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3284]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3306]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:3314]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized1' (18#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized1' (18#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_legacy__parameterized1' (18#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_viv__parameterized0' (18#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-113] binding component instance 'fde_reg' to cell 'FDE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82736]
+INFO: [Synth 8-113] binding component instance 'fde_reg' to cell 'FDE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82736]
+INFO: [Synth 8-113] binding component instance 'fde_reg' to cell 'FDE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82736]
+INFO: [Synth 8-113] binding component instance 'fde_reg' to cell 'FDE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82736]
+INFO: [Synth 8-638] synthesizing module 'so_run_addr_gen_rotator' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:78025]
+INFO: [Synth 8-638] synthesizing module 'mux_bus16' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25947]
+INFO: [Synth 8-113] binding component instance 'mux4_0' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25988]
+INFO: [Synth 8-113] binding component instance 'mux4_1' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25999]
+INFO: [Synth 8-113] binding component instance 'mux4_2' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26010]
+INFO: [Synth 8-113] binding component instance 'mux4_3' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26021]
+INFO: [Synth 8-113] binding component instance 'f7_0' to cell 'MUXF7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26032]
+INFO: [Synth 8-113] binding component instance 'f7_1' to cell 'MUXF7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26038]
+INFO: [Synth 8-113] binding component instance 'f8' to cell 'MUXF8' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26044]
+INFO: [Synth 8-113] binding component instance 'reg0' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26064]
+INFO: [Synth 8-113] binding component instance 'reg1' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26073]
+INFO: [Synth 8-113] binding component instance 'mux4_0' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25988]
+INFO: [Synth 8-113] binding component instance 'mux4_1' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25999]
+INFO: [Synth 8-113] binding component instance 'mux4_2' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26010]
+INFO: [Synth 8-113] binding component instance 'mux4_3' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26021]
+INFO: [Synth 8-113] binding component instance 'f7_0' to cell 'MUXF7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26032]
+INFO: [Synth 8-113] binding component instance 'f7_1' to cell 'MUXF7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26038]
+INFO: [Synth 8-113] binding component instance 'f8' to cell 'MUXF8' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26044]
+INFO: [Synth 8-113] binding component instance 'reg0' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26064]
+INFO: [Synth 8-113] binding component instance 'reg1' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26073]
+INFO: [Synth 8-113] binding component instance 'mux4_0' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25988]
+INFO: [Synth 8-113] binding component instance 'mux4_1' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25999]
+INFO: [Synth 8-113] binding component instance 'mux4_2' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26010]
+INFO: [Synth 8-113] binding component instance 'mux4_3' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26021]
+INFO: [Synth 8-113] binding component instance 'f7_0' to cell 'MUXF7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26032]
+INFO: [Synth 8-113] binding component instance 'f7_1' to cell 'MUXF7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26038]
+INFO: [Synth 8-113] binding component instance 'f8' to cell 'MUXF8' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26044]
+INFO: [Synth 8-113] binding component instance 'reg0' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26064]
+INFO: [Synth 8-113] binding component instance 'reg1' to cell 'FDRE' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26073]
+INFO: [Synth 8-113] binding component instance 'mux4_0' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25988]
+INFO: [Synth 8-113] binding component instance 'mux4_1' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25999]
+INFO: [Synth 8-113] binding component instance 'mux4_2' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26010]
+INFO: [Synth 8-113] binding component instance 'mux4_3' to cell 'LUT6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:26021]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'mux_bus16' (19#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25947]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized0' (19#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'so_run_addr_gen_rotator' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:78025]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized0' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized0' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized1' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized2' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized1' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized1' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized2' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized2' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized2' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized2' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized2' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized3' (20#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'so_run_addr_gen' (21#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:82372]
+INFO: [Synth 8-638] synthesizing module 'so_io_addr_gen' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:77050]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized3' (21#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized3' (21#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized4' (21#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized5' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized5' (21#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_viv__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5542' bound to instance 'i_baseblox_addsub' of component 'c_addsub_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6636]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_legacy__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_fabric_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5278' bound to instance 'the_addsub' of component 'c_addsub_v12_0_8_fabric_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5909]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_lut6_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2291' bound to instance 'i_lut6_addsub' of component 'c_addsub_v12_0_8_lut6_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5347]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-3491] module 'c_reg_fd_v12_0_1_viv' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:331' bound to instance 'qreg' of component 'c_reg_fd_v12_0_1_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2940]
+INFO: [Synth 8-638] synthesizing module 'c_reg_fd_v12_0_1_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'c_reg_fd_v12_0_1_viv' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized3' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized3' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_legacy__parameterized3' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_viv__parameterized1' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized4' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized4' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized6' (22#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'so_io_addr_gen' (23#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:77050]
+INFO: [Synth 8-256] done synthesizing module 'so_addr_gen' (24#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:83848]
+INFO: [Synth 8-638] synthesizing module 'twiddle_gen' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:53651]
+INFO: [Synth 8-638] synthesizing module 'twgen_half_sincos' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:53023]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:53074]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:53092]
+INFO: [Synth 8-256] done synthesizing module 'twgen_half_sincos' (25#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:53023]
+INFO: [Synth 8-256] done synthesizing module 'twiddle_gen' (26#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:53651]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized7' (26#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized8' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized8' (26#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized5' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized5' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized5' (26#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized5' (26#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized9' (26#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'so_control' (27#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:84671]
+INFO: [Synth 8-638] synthesizing module 'so_datapath' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86304]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86374]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86375]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86376]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86377]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized10' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized10' (27#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized11' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized11' (27#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'xfft_v9_0_9_mux_bus2' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25041]
+INFO: [Synth 8-256] done synthesizing module 'xfft_v9_0_9_mux_bus2' (28#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25041]
+INFO: [Synth 8-638] synthesizing module 'so_memory' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:85351]
+INFO: [Synth 8-638] synthesizing module 'dpm' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:27947]
+INFO: [Synth 8-256] done synthesizing module 'dpm' (29#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:27947]
+INFO: [Synth 8-256] done synthesizing module 'so_memory' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:85351]
+INFO: [Synth 8-638] synthesizing module 'xfft_v9_0_9_mux_bus2__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25041]
+INFO: [Synth 8-256] done synthesizing module 'xfft_v9_0_9_mux_bus2__parameterized0' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25041]
+INFO: [Synth 8-638] synthesizing module 'xfft_v9_0_9_mux_bus2__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25041]
+INFO: [Synth 8-256] done synthesizing module 'xfft_v9_0_9_mux_bus2__parameterized1' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:25041]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized12' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized12' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized13' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized13' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized14' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized6' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized6' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized14' (30#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'cmpy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:36184]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_synth' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:11637]
+INFO: [Synth 8-638] synthesizing module 'cmpy_4_dsp48' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:11285]
+INFO: [Synth 8-638] synthesizing module 'cmpy_mux2to1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:3560]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_mux2to1' (31#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:3560]
+INFO: [Synth 8-638] synthesizing module 'cmpy_4_dsp48_mult' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:6969]
+INFO: [Synth 8-638] synthesizing module 'op_resize' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-256] done synthesizing module 'op_resize' (32#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/mult_gen_v12_0_10/hdl/mult_gen_v12_0_vh_rfs.vhd:4028]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9731]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9734]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9731]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9734]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9731]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9734]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized0' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized1' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9731]
+INFO: [Synth 8-3919] null assignment ignored [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:9734]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized2' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized2' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized3' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized4' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized5' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized5' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized6' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized6' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized7' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized8' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1812]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized8' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized9' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized10' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized10' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized11' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized11' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized12' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized12' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized13' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized13' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized14' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized14' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized15' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized15' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized16' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized16' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized17' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized17' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized18' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized18' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized19' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized19' (33#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_4_dsp48_mult' (34#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:6969]
+INFO: [Synth 8-638] synthesizing module 'cmpy_xfft_so_sync' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:3428]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_10_delay_line__parameterized20' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_delay_line__parameterized20' (34#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1587]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_xfft_so_sync' (35#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:3428]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_4_dsp48' (36#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:11285]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_10_synth' (37#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:11637]
+INFO: [Synth 8-256] done synthesizing module 'cmpy' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:36184]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized15' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized15' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized16' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized16' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized17' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-638] synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_legacy__parameterized7' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:1549]
+INFO: [Synth 8-256] done synthesizing module 'c_shift_ram_v12_0_8_viv__parameterized7' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_shift_ram_v12_0_8/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2545]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized17' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'butterfly' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:35825]
+INFO: [Synth 8-638] synthesizing module 'adder' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22277]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_viv__parameterized2' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5542' bound to instance 'i_baseblox_addsub' of component 'c_addsub_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6636]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_legacy__parameterized5' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_fabric_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5278' bound to instance 'the_addsub' of component 'c_addsub_v12_0_8_fabric_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5909]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized5' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_lut6_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2291' bound to instance 'i_lut6_addsub' of component 'c_addsub_v12_0_8_lut6_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5347]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized5' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-3491] module 'c_reg_fd_v12_0_1_viv' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:331' bound to instance 'qreg' of component 'c_reg_fd_v12_0_1_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2940]
+INFO: [Synth 8-638] synthesizing module 'c_reg_fd_v12_0_1_viv__parameterized1' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'c_reg_fd_v12_0_1_viv__parameterized1' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized5' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized5' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_legacy__parameterized5' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_viv__parameterized2' (38#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-256] done synthesizing module 'adder' (39#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22277]
+INFO: [Synth 8-638] synthesizing module 'subtracter' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:30516]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_viv__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5542' bound to instance 'i_baseblox_addsub' of component 'c_addsub_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6636]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_legacy__parameterized7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_fabric_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5278' bound to instance 'the_addsub' of component 'c_addsub_v12_0_8_fabric_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5909]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_lut6_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2291' bound to instance 'i_lut6_addsub' of component 'c_addsub_v12_0_8_lut6_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5347]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized7' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-3491] module 'c_reg_fd_v12_0_1_viv' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:331' bound to instance 'qreg' of component 'c_reg_fd_v12_0_1_viv' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2940]
+INFO: [Synth 8-638] synthesizing module 'c_reg_fd_v12_0_1_viv__parameterized3' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'c_reg_fd_v12_0_1_viv__parameterized3' (39#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_reg_fd_v12_0_1/hdl/c_reg_fd_v12_0_vh_rfs.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized7' (39#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized7' (39#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_legacy__parameterized7' (39#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_viv__parameterized3' (39#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-256] done synthesizing module 'subtracter' (40#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:30516]
+INFO: [Synth 8-256] done synthesizing module 'butterfly' (41#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:35825]
+INFO: [Synth 8-638] synthesizing module 'unbiased_round' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:48430]
+INFO: [Synth 8-638] synthesizing module 'logic_gate' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22547]
+INFO: [Synth 8-256] done synthesizing module 'logic_gate' (42#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22547]
+INFO: [Synth 8-638] synthesizing module 'logic_gate__parameterized0' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22547]
+INFO: [Synth 8-256] done synthesizing module 'logic_gate__parameterized0' (42#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22547]
+INFO: [Synth 8-638] synthesizing module 'shift_ram__parameterized18' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-256] done synthesizing module 'shift_ram__parameterized18' (42#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:23799]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_viv__parameterized4' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5542' bound to instance 'i_baseblox_addsub' of component 'c_addsub_v12_0_8_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6636]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_legacy__parameterized9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_fabric_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5278' bound to instance 'the_addsub' of component 'c_addsub_v12_0_8_fabric_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5909]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_8_lut6_legacy' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2291' bound to instance 'i_lut6_addsub' of component 'c_addsub_v12_0_8_lut6_legacy' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5347]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_lut6_legacy__parameterized9' (42#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:2343]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_fabric_legacy__parameterized9' (42#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5330]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_legacy__parameterized9' (42#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:5618]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_8_viv__parameterized4' (42#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/c_addsub_v12_0_8/hdl/c_addsub_v12_0_vh_rfs.vhd:6515]
+INFO: [Synth 8-256] done synthesizing module 'unbiased_round' (43#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:48430]
+INFO: [Synth 8-256] done synthesizing module 'so_datapath' (44#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86304]
+INFO: [Synth 8-256] done synthesizing module 'xfft_v9_0_9_e' (45#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:98219]
+WARNING: [Synth 8-3848] Net RFS in module/entity xfft_v9_0_9_core does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:99977]
+INFO: [Synth 8-256] done synthesizing module 'xfft_v9_0_9_core' (46#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:100039]
+WARNING: [Synth 8-3848] Net xk_re_array[11] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101264]
+WARNING: [Synth 8-3848] Net xk_re_array[10] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101264]
+WARNING: [Synth 8-3848] Net xk_re_array[9] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101264]
+WARNING: [Synth 8-3848] Net xk_re_array[8] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101264]
+WARNING: [Synth 8-3848] Net xk_re_array[7] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101264]
+WARNING: [Synth 8-3848] Net xk_im_array[11] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101265]
+WARNING: [Synth 8-3848] Net xk_im_array[10] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101265]
+WARNING: [Synth 8-3848] Net xk_im_array[9] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101265]
+WARNING: [Synth 8-3848] Net xk_im_array[8] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101265]
+WARNING: [Synth 8-3848] Net xk_im_array[7] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101265]
+WARNING: [Synth 8-3848] Net blk_exp_array[11] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101266]
+WARNING: [Synth 8-3848] Net blk_exp_array[10] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101266]
+WARNING: [Synth 8-3848] Net blk_exp_array[9] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101266]
+WARNING: [Synth 8-3848] Net blk_exp_array[8] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101266]
+WARNING: [Synth 8-3848] Net blk_exp_array[7] in module/entity xfft_v9_0_9_viv does not have driver. [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101266]
+INFO: [Synth 8-256] done synthesizing module 'xfft_v9_0_9_viv' (47#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101006]
+INFO: [Synth 8-256] done synthesizing module 'xfft_v9_0_9' (48#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'xfft_1' (49#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_1/synth/xfft_1.vhd:84]
+WARNING: [Synth 8-350] instance 'f1' of module 'xfft_1' requires 20 connections, but only 12 given [D:/FPGA/V_project/IP/ad_fft/src/fft1.v:114]
+INFO: [Synth 8-256] done synthesizing module 'fft1' (50#1) [D:/FPGA/V_project/IP/ad_fft/src/fft1.v:22]
+INFO: [Synth 8-638] synthesizing module 'fft2' [D:/FPGA/V_project/IP/ad_fft/src/fft2.v:22]
+INFO: [Synth 8-638] synthesizing module 'xfft_2' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/synth/xfft_2.vhd:84]
+INFO: [Synth 8-3491] module 'xfft_v9_0_9' declared at 'd:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0.vhd:121' bound to instance 'U0' of component 'xfft_v9_0_9' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/synth/xfft_2.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'xfft_2' (51#1) [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/synth/xfft_2.vhd:84]
+WARNING: [Synth 8-350] instance 'f1' of module 'xfft_2' requires 20 connections, but only 12 given [D:/FPGA/V_project/IP/ad_fft/src/fft2.v:98]
+INFO: [Synth 8-256] done synthesizing module 'fft2' (52#1) [D:/FPGA/V_project/IP/ad_fft/src/fft2.v:22]
+INFO: [Synth 8-256] done synthesizing module 'fft14' (53#1) [D:/FPGA/V_project/IP/ad_fft/src/fft14.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ad_fft' (54#1) [D:/FPGA/V_project/IP/ad_fft/src/ad_fft.v:22]
+WARNING: [Synth 8-3917] design ad_fft has port ad2_os[2] driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad2_os[1] driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad2_os[0] driven by constant 0
+WARNING: [Synth 8-3917] design ad_fft has port ad1_range driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad2_range driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:09 ; elapsed = 00:03:16 . Memory (MB): peak = 532.500 ; gain = 360.242
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin \multiple_luts.lut_loop[4].is_LUT6.AND_or_NAND_gate.and_lut6 :I2 to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22696]
+INFO: [Synth 8-3295] tying undriven pin \multiple_luts.lut_loop[4].is_LUT6.AND_or_NAND_gate.and_lut6 :I3 to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22696]
+INFO: [Synth 8-3295] tying undriven pin \multiple_luts.lut_loop[4].is_LUT6.AND_or_NAND_gate.and_lut6 :I4 to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22696]
+INFO: [Synth 8-3295] tying undriven pin \multiple_luts.lut_loop[4].is_LUT6.AND_or_NAND_gate.and_lut6 :I5 to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:22696]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [50] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [49] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [48] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [47] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [46] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [45] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [44] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [43] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [42] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [41] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [40] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [39] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [38] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [37] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [36] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [35] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [34] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [33] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [32] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [31] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [30] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [29] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [28] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [27] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [26] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [25] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [24] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [23] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [22] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [21] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [20] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [19] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [18] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [17] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [16] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [15] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [14] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [13] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [12] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [11] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [10] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [9] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [8] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [7] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [6] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [5] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [4] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [3] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [2] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [1] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[11] [0] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [50] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [49] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [48] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [47] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [46] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [45] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [44] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [43] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [42] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [41] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [40] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [39] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [38] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [37] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [36] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [35] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [34] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [33] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [32] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [31] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [30] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [29] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [28] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [27] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [26] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [25] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [24] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [23] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [22] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [21] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [20] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [19] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [18] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [17] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [16] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [15] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [14] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [13] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [12] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [11] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [10] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [9] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [8] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [7] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Synth 8-3295] tying undriven pin axi_wrapper:\xk_re_array[10] [6] to constant 0 [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:101378]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:09 ; elapsed = 00:03:17 . Memory (MB): peak = 532.500 ; gain = 360.242
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 5978 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/FPGA/V_project/IP/ad_fft/tmp_edit_project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/FPGA/V_project/IP/ad_fft/tmp_edit_project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 772 instances were transformed.
+  FD => FDRE: 6 instances
+  FDE => FDRE: 738 instances
+  RAMB18SDP => RAMB18E1: 28 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 862.465 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:03:37 ; elapsed = 00:03:48 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:37 ; elapsed = 00:03:48 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for f2/f1/f1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for f2/f2/f1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:37 ; elapsed = 00:03:48 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ad1'
+INFO: [Synth 8-5545] ROM "ad_start" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ad2'
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'CP_LEN_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93512]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93514]
+INFO: [Synth 8-4471] merging register 'FWD_INV0_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93515]
+INFO: [Synth 8-4471] merging register 'FWD_INV1_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93516]
+INFO: [Synth 8-4471] merging register 'FWD_INV2_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93517]
+INFO: [Synth 8-4471] merging register 'FWD_INV3_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93518]
+INFO: [Synth 8-4471] merging register 'FWD_INV4_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93519]
+INFO: [Synth 8-4471] merging register 'FWD_INV5_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93520]
+INFO: [Synth 8-4471] merging register 'FWD_INV6_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93521]
+INFO: [Synth 8-4471] merging register 'FWD_INV7_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93522]
+INFO: [Synth 8-4471] merging register 'FWD_INV8_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93523]
+INFO: [Synth 8-4471] merging register 'FWD_INV9_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93524]
+INFO: [Synth 8-4471] merging register 'FWD_INV10_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93525]
+INFO: [Synth 8-4471] merging register 'FWD_INV11_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93526]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH0_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93527]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH1_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93528]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH2_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93529]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH3_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93530]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH4_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93531]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH5_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93532]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH6_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93533]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH7_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93534]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH8_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93535]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH9_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93536]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH10_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93537]
+INFO: [Synth 8-4471] merging register 'SCALE_SCH11_WE_reg' into 'fwd_inv_we_int_reg' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:93538]
+INFO: [Synth 8-5546] ROM "reading_last_symbol" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "event_tlast_unexpected" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_count_mask" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                             0000
+                 AD_CONV |                             0001 |                             0001
+                  Wait_1 |                             0010 |                             0010
+               Wait_busy |                             0011 |                             0011
+               REad1_ch1 |                             0100 |                             0100
+               REad1_ch2 |                             0101 |                             0101
+               REad1_ch3 |                             0110 |                             0110
+               REad1_ch4 |                             0111 |                             0111
+               REad1_ch5 |                             1000 |                             1000
+               REad1_ch6 |                             1001 |                             1001
+               REad1_ch7 |                             1010 |                             1010
+               REad1_ch8 |                             1011 |                             1011
+               READ_DONE |                             1100 |                             1100
+                ENABLE_W |                             1101 |                             1101
+                 CLOSE_W |                             1110 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ad1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                             0000
+                 AD_CONV |                             0001 |                             0001
+                  Wait_1 |                             0010 |                             0010
+               Wait_busy |                             0011 |                             0011
+               REad2_ch1 |                             0100 |                             0100
+               REad2_ch2 |                             0101 |                             0101
+               REad2_ch3 |                             0110 |                             0110
+               REad2_ch4 |                             0111 |                             0111
+               REad2_ch5 |                             1000 |                             1000
+               REad2_ch6 |                             1001 |                             1001
+               REad2_ch7 |                             1010 |                             1010
+               REad2_ch8 |                             1011 |                             1011
+               READ_DONE |                             1100 |                             1100
+                ENABLE_W |                             1101 |                             1101
+                 CLOSE_W |                             1110 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ad2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:41 ; elapsed = 00:03:53 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:03:42 ; elapsed = 00:03:54 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[1].need_dsp_delay.Bidelay0/dN.std_srl.shift_reg_reg[0][8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[0].need_dsp_delay.Bidelay0/d1.dout_i_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1820]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[1].need_dsp_delay.Bidelay0/dN.std_srl.shift_reg_reg[0][8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[0].need_dsp_delay.Bidelay0/d1.dout_i_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1820]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/write_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/write_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86670]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/read_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/read_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86671]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[1].need_dsp_delay.Bidelay0/dN.std_srl.shift_reg_reg[0][8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[0].need_dsp_delay.Bidelay0/d1.dout_i_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1820]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/write_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/write_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86670]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/read_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/read_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86671]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[1].need_dsp_delay.Bidelay0/dN.std_srl.shift_reg_reg[0][8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[0].need_dsp_delay.Bidelay0/d1.dout_i_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1820]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/write_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/write_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86670]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/read_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/read_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86671]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[1].need_dsp_delay.Bidelay0/dN.std_srl.shift_reg_reg[0][8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[0].need_dsp_delay.Bidelay0/d1.dout_i_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1820]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/write_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/write_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86670]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/read_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/read_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86671]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[1].need_dsp_delay.Bidelay0/dN.std_srl.shift_reg_reg[0][8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[0].need_dsp_delay.Bidelay0/d1.dout_i_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1820]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/write_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/write_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86670]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/read_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/read_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86671]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[1].need_dsp_delay.Bidelay0/dN.std_srl.shift_reg_reg[0][8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.iBdelx[0].iBdely[1].u_l[0].need_dsp_delay.Bidelay0/d1.dout_i_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/cmpy_v6_0_10/hdl/cmpy_v6_0_vh_rfs.vhd:1820]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/write_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/write_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86670]
+INFO: [Synth 8-4471] merging register 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/read_addr_reg_reg[8:0]' into 'xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/read_addr_reg_reg[8:0]' [d:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_v9_0_9/hdl/xfft_v9_0_vh_rfs.vhd:86671]
+INFO: [Synth 8-5546] ROM "axi_wrapper/reading_last_symbol" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "axi_wrapper/reading_last_symbol" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "f1/f1/ad_start" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design ad_fft has port ad_os[2] driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad_os[1] driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad_os[0] driven by constant 0
+WARNING: [Synth 8-3917] design ad_fft has port ad2_os[2] driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad2_os[1] driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad2_os[0] driven by constant 0
+WARNING: [Synth 8-3917] design ad_fft has port ad1_range driven by constant 1
+WARNING: [Synth 8-3917] design ad_fft has port ad2_range driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:03:45 ; elapsed = 00:03:58 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:03:45 ; elapsed = 00:03:58 . Memory (MB): peak = 863.277 ; gain = 691.020
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xfft_v9_0_9:/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/run_addr_gen/r_count_mask_fixlen.gen_r_count_mask_reg[0].reg_fdre )
+INFO: [Synth 8-3886] merging instance 'xfft_v9_0_9:/i_synth/\axi_wrapper/gen_store_last_config.use_last_config_reg ' (FDRE) to 'xfft_v9_0_9:/i_synth/\axi_wrapper/current_state_reg[9] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (xfft_v9_0_9:/i_synth/\axi_wrapper/gen_nrt_events.event_status_channel_halt_int_reg )
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/control/addr_gen/run_addr_gen/r_count_mask_fixlen.gen_r_count_mask_reg[0].reg_fdre ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/has_rounding.rounder_real/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/has_rounding.rounder_imag/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/has_rounding.rounder_real/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/has_rounding.rounder_imag/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/has_rounding.rounder_real/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/has_rounding.rounder_imag/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/has_rounding.rounder_real/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/has_rounding.rounder_imag/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/has_rounding.rounder_real/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/has_rounding.rounder_imag/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/has_rounding.rounder_real/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/has_rounding.rounder_imag/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/has_rounding.rounder_real/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/has_rounding.rounder_imag/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0 ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/current_state_reg[10] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/current_state_reg[7] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/current_state_reg[5] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/current_state_reg[4] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/frames_in_progress_reg[2] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/frames_in_progress_reg[1] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/frames_in_progress_reg[0] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/no_frames_in_progress_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/blk_event_frame_started.ced_current_state_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/blk_event_tlast_missing.ced_current_state_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/gen_nrt_events.event_status_channel_halt_int_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\axi_wrapper/gen_store_last_config.use_last_config_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/p_reg_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pr_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[31] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/complex_multiplier/i_cmpy/four_mult_structure.use_dsp.i_dsp/drive_single_outputs.resync_logic/pi_i_reg[30] ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3886] merging instance '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f1/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv__1.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv__1.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv__1.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv__1.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv__1.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv__1.
+INFO: [Synth 8-3886] merging instance '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3886] merging instance '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ' (FDRE) to '\f2/f2/f1 /U0/i_synth/\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[6].datapath/memory/blk_ram.dpm_no_split.wea_i_reg '
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[0].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[1].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[2].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[3].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[4].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+INFO: [Synth 8-3332] Sequential element (\xfft_inst/non_floating_point.arch_e.xfft_inst/multichannel.multichannel_datapath[5].datapath/memory/blk_ram.dpm_no_split.wea_i_reg ) is unused and will be removed from module xfft_v9_0_9_viv.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:03:55 ; elapsed = 00:04:09 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:03:55 ; elapsed = 00:04:09 . Memory (MB): peak = 863.277 ; gain = 691.020
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:13 ; elapsed = 00:04:28 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:15 ; elapsed = 00:04:30 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:24 ; elapsed = 00:04:40 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:04:24 ; elapsed = 00:04:40 . Memory (MB): peak = 863.277 ; gain = 691.020
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:24 ; elapsed = 00:04:40 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:26 ; elapsed = 00:04:43 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:27 ; elapsed = 00:04:44 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:30 ; elapsed = 00:04:47 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:31 ; elapsed = 00:04:48 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:31 ; elapsed = 00:04:48 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:31 ; elapsed = 00:04:48 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    16|
+|3     |DSP48E1   |    14|
+|4     |DSP48E1_1 |    14|
+|5     |DSP48E1_2 |    14|
+|6     |DSP48E1_3 |    14|
+|7     |LUT1      |   162|
+|8     |LUT2      |   168|
+|9     |LUT3      |  4539|
+|10    |LUT4      |   221|
+|11    |LUT5      |    99|
+|12    |LUT6      |   343|
+|13    |MUXCY     |  2606|
+|14    |MUXF7     |    36|
+|15    |MUXF8     |    18|
+|16    |RAMB18SDP |    28|
+|17    |RAMB36E1  |     2|
+|18    |SRL16E    |  3724|
+|19    |SRLC32E   |    18|
+|20    |XORCY     |  2544|
+|21    |FD        |     6|
+|22    |FDE       |   738|
+|23    |FDRE      | 15485|
+|24    |FDSE      |   115|
+|25    |IBUF      |    36|
+|26    |OBUF      |   913|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:31 ; elapsed = 00:04:48 . Memory (MB): peak = 863.277 ; gain = 691.020
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:04:04 . Memory (MB): peak = 863.277 ; gain = 28.109
+Synthesis Optimization Complete : Time (s): cpu = 00:04:32 ; elapsed = 00:04:49 . Memory (MB): peak = 863.277 ; gain = 691.020
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6032 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1562 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 790 instances
+  FD => FDRE: 6 instances
+  FDE => FDRE: 738 instances
+  RAMB18SDP => RAMB18E1: 28 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+713 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:45 ; elapsed = 00:04:59 . Memory (MB): peak = 863.277 ; gain = 632.605
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 863.277 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 863.277 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 22 09:37:21 2018...

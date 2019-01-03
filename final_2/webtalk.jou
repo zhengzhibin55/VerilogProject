@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Fri May 18 14:54:38 2018
+# Process ID: 6572
+# Current directory: D:/FPGA/V_project/合并后备/100M后备/final_2
+# Command line: wbtcv.exe -mode batch -source D:/FPGA/V_project/合并后备/100M后备/final_2/lcd7_touch.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: D:/FPGA/V_project/合并后备/100M后备/final_2/webtalk.log
+# Journal file: D:/FPGA/V_project/合并后备/100M后备/final_2\webtalk.jou
+#-----------------------------------------------------------
+source D:/FPGA/V_project/合并后备/100M后备/final_2/lcd7_touch.hw/webtalk/labtool_webtalk.tcl -notrace

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun May 27 17:07:33 2018
+# Process ID: 9116
+# Current directory: D:/FPGA/V_project/IP/w_ram
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9444 D:\FPGA\V_project\IP\w_ram\tmp_edit_project.xpr
+# Log file: D:/FPGA/V_project/IP/w_ram/vivado.log
+# Journal file: D:/FPGA/V_project/IP/w_ram\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/V_project/IP/w_ram/tmp_edit_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 750.414 ; gain = 144.383
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+INFO: [HDL 9-2216] Analyzing Verilog file "D:/FPGA/V_project/IP/w_ram/src/w_ram.v" into library work [D:/FPGA/V_project/IP/w_ram/src/w_ram.v:1]
+[Sun May 27 17:09:54 2018] Launched synth_1...
+Run output will be captured here: D:/FPGA/V_project/IP/w_ram/tmp_edit_project.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 27 17:10:34 2018...

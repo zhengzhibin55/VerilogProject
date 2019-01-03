@@ -1,0 +1,140 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port vid_io_out_clk -pg 1 -y 280 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 4:130 -defaultsOSRD -top
+preplace port ad1_rd -pg 1 -y 1660 -defaultsOSRD
+preplace port ad1_cs -pg 1 -y 1640 -defaultsOSRD
+preplace port lcd_int -pg 1 -y 420 -defaultsOSRD
+preplace port ad1_range -pg 1 -y 1840 -defaultsOSRD
+preplace port ad2_busy -pg 1 -y 1800 -defaultsOSRD
+preplace port ad1_busy -pg 1 -y 1760 -defaultsOSRD
+preplace port lcd_iic -pg 1 -lvl 4:170 -defaultsOSRD -top
+preplace port lcd_bl_pwm -pg 1 -y 1550 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4:150 -defaultsOSRD -top
+preplace port ad2_cs -pg 1 -y 1740 -defaultsOSRD
+preplace port ad2_range -pg 1 -y 1860 -defaultsOSRD
+preplace port ad_reset -pg 1 -y 1680 -defaultsOSRD
+preplace port ad2_convstab -pg 1 -y 1800 -defaultsOSRD
+preplace port ad2_rd -pg 1 -y 1760 -defaultsOSRD
+preplace port vid_hsync -pg 1 -y 660 -defaultsOSRD
+preplace port ad_convstab -pg 1 -y 1700 -defaultsOSRD
+preplace port ad2_reset -pg 1 -y 1780 -defaultsOSRD
+preplace port vid_vsync -pg 1 -y 700 -defaultsOSRD
+preplace port vid_active_video -pg 1 -y 560 -defaultsOSRD
+preplace portBus ad2_os -pg 1 -y 1820 -defaultsOSRD
+preplace portBus ad2_data -pg 1 -y 1780 -defaultsOSRD
+preplace portBus ad1_data -pg 1 -y 1740 -defaultsOSRD
+preplace portBus vid_data -pg 1 -y 620 -defaultsOSRD
+preplace portBus relay -pg 1 -y 1490 -defaultsOSRD
+preplace portBus ad_os -pg 1 -y 1720 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 7 -y 720 -defaultsOSRD
+preplace inst fft_reset1_0 -pg 1 -lvl 7 -y 1570 -defaultsOSRD
+preplace inst ad_fft_0 -pg 1 -lvl 8 -y 1770 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 6 -y 580 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 2 -y 600 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -y 820 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 7 -y 1720 -defaultsOSRD
+preplace inst PinRedistribution_0 -pg 1 -lvl 8 -y 620 -defaultsOSRD
+preplace inst w_ram_0 -pg 1 -lvl 6 -y 1330 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -y 620 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 700 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 7 -y 360 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 7 -y 1080 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 2 -y 390 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 7 -y 1350 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 6 -y 790 -defaultsOSRD
+preplace inst axi_dynclk_0 -pg 1 -lvl 7 -y 230 -defaultsOSRD
+preplace inst pwm_0 -pg 1 -lvl 8 -y 1550 -defaultsOSRD
+preplace inst reset_0 -pg 1 -lvl 5 -y 930 -defaultsOSRD
+preplace inst r_ram_0 -pg 1 -lvl 6 -y 1080 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 6 -y 930 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 3 -y 370 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 5 -y 520 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 4 -y 310 -defaultsOSRD
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 2 1 700
+preplace netloc processing_system7_0_FIXED_IO 1 4 1 1470
+preplace netloc r_ram_0_dinb 1 6 1 2290
+preplace netloc ad_fft_0_fft_data 1 5 4 1920 1210 NJ 1220 NJ 1220 2960
+preplace netloc ad1_data_1 1 0 8 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ 1800 NJ
+preplace netloc axi_vdma_0_M_AXIS_MM2S 1 2 4 720 540 NJ 540 NJ 310 NJ
+preplace netloc ad1_busy_1 1 0 8 NJ 1760 NJ 1760 NJ 1760 NJ 1760 NJ 1760 NJ 1760 NJ 1770 NJ
+preplace netloc xlconcat_0_dout 1 3 1 1060
+preplace netloc v_tc_0_vtiming_out 1 6 1 2280
+preplace netloc r_ram_0_web 1 6 1 2220
+preplace netloc vid_vsync 1 7 2 NJ 700 NJ
+preplace netloc reset_0_reset 1 5 2 1840 1190 NJ
+preplace netloc ad_fft_0_ad_os 1 8 1 NJ
+preplace netloc fft_reset1_0_fft_reset 1 5 3 1860 1820 NJ 1820 2640
+preplace netloc w_ram_0_addra 1 6 1 N
+preplace netloc rst_processing_system7_0_140M_peripheral_aresetn 1 2 1 730
+preplace netloc r_ram_0_clkb 1 6 1 2290
+preplace netloc axi_gpio_0_GPIO 1 7 2 NJ 350 NJ
+preplace netloc fft_reset1_0_reset_done 1 5 3 1890 1480 NJ 1480 2620
+preplace netloc processing_system7_0_DDR 1 4 1 1460
+preplace netloc ad_fft_0_ad1_cs 1 8 1 NJ
+preplace netloc ad_fft_0_done 1 5 4 1880 1200 NJ 1210 NJ 1210 2970
+preplace netloc w_ram_0_ena 1 6 1 2210
+preplace netloc axi_dynclk_0_PXL_CLK_O1 1 5 4 1920 450 2290 450 2650 280 NJ
+preplace netloc fft_reset1_0_choise 1 5 3 1900 1660 NJ 1660 2630
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 5 10 480 340 480 NJ 510 NJ 510 1460
+preplace netloc ad_fft_0_ad2_convstab 1 8 1 NJ
+preplace netloc blk_mem_gen_1_douta 1 5 2 1920 1450 NJ
+preplace netloc ad2_busy_1 1 0 8 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1800 NJ 1810 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 6 1 2290
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 5 1 1850
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 5 2 1860 200 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 6 1 2250
+preplace netloc axi_gpio_0_ip2intc_irpt 1 2 6 740 500 NJ 500 NJ 150 NJ 150 NJ 150 2640
+preplace netloc fft_reset1_0_reset_i 1 5 3 1910 1670 NJ 1670 2620
+preplace netloc ad_fft_0_ad2_reset 1 8 1 NJ
+preplace netloc PinRedistribution_0_vid_data 1 8 1 N
+preplace netloc axi_vdma_0_mm2s_introut 1 2 1 710
+preplace netloc xlconstant_2_dout 1 7 1 NJ
+preplace netloc processing_system7_0_IIC_0 1 4 1 1480
+preplace netloc w_ram_0_wea 1 6 1 2180
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 5 1 N
+preplace netloc ad_fft_0_ad2_rd 1 8 1 NJ
+preplace netloc ad_fft_0_ad_convstab 1 8 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 20 580 350 490 NJ 490 1040 560 1550 280 1870 720 2260 1790 2670
+preplace netloc fft_reset1_0_relay 1 7 2 NJ 1490 NJ
+preplace netloc w_ram_0_rsta 1 6 1 2200
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 6 360 300 740 250 1050 490 1500 290 1890 710 NJ
+preplace netloc ad_fft_0_ad2_cs 1 8 1 NJ
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 4 NJ 500 NJ 530 NJ 530 1560
+preplace netloc w_ram_0_clka 1 6 1 N
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 1 5 370 510 NJ 520 NJ 520 NJ 320 1850
+preplace netloc r_ram_0_addrb 1 6 1 2290
+preplace netloc ad_fft_0_ad2_os 1 8 1 NJ
+preplace netloc v_axi4s_vid_out_0_vid_active_video 1 7 2 NJ 560 NJ
+preplace netloc v_tc_0_irq 1 2 5 750 550 NJ 550 NJ 270 NJ 270 2220
+preplace netloc rst_processing_system7_0_140M_interconnect_aresetn 1 2 1 720
+preplace netloc v_axi4s_vid_out_0_vid_data 1 7 1 2650
+preplace netloc ad_fft_0_ad2_range 1 8 1 NJ
+preplace netloc w_ram_0_ram_done 1 6 1 2190
+preplace netloc w_ram_0_dina 1 6 1 N
+preplace netloc ad_fft_0_ad_reset 1 8 1 NJ
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 5 3 1920 860 NJ 890 2640
+preplace netloc v_axi4s_vid_out_0_vid_hsync 1 7 2 NJ 690 NJ
+preplace netloc pwm_0_lcd_bl_pwm 1 8 1 NJ
+preplace netloc r_ram_0_enb 1 6 1 2280
+preplace netloc ad2_data_1 1 0 8 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ 1780 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 4 1 1510
+preplace netloc xlconstant_0_dout 1 5 1 NJ
+preplace netloc axis_subset_converter_0_M_AXIS 1 6 1 2220
+preplace netloc ad_fft_0_ad1_range 1 8 1 NJ
+preplace netloc blk_mem_gen_0_doutb 1 5 2 1920 1180 2290
+preplace netloc axi_mem_intercon_M00_AXI 1 3 1 1030
+preplace netloc r_ram_0_rstb 1 6 1 2270
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 5 2 1840 340 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 6 360 690 NJ 690 NJ 660 1520 260 1900 260 2290
+preplace netloc ad_fft_0_ad1_rd 1 8 1 NJ
+levelinfo -pg 1 -10 180 540 890 1260 1700 2050 2470 2830 2990 -top 0 -bot 1950
+",
+}
+{
+   da_axi4_cnt: "13",
+   da_board_cnt: "3",
+   da_bram_cntlr_cnt: "2",
+   da_ps7_cnt: "1",
+}

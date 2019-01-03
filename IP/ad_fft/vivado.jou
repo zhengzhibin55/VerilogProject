@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sat Sep 22 09:24:55 2018
+# Process ID: 4492
+# Current directory: D:/FPGA/V_project/IP/ad_fft
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5508 D:\FPGA\V_project\IP\ad_fft\tmp_edit_project.xpr
+# Log file: D:/FPGA/V_project/IP/ad_fft/vivado.log
+# Journal file: D:/FPGA/V_project/IP/ad_fft\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/V_project/IP/ad_fft/tmp_edit_project.xpr
+set_property -dict [list CONFIG.target_clock_frequency {100} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_ips xfft_1]
+generate_target all [get_files  D:/FPGA/V_project/IP/ad_fft/src/xfft_1/xfft_1.xci]
+export_ip_user_files -of_objects [get_files D:/FPGA/V_project/IP/ad_fft/src/xfft_1/xfft_1.xci] -no_script -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/V_project/IP/ad_fft/src/xfft_1/xfft_1.xci] -directory D:/FPGA/V_project/IP/ad_fft/tmp_edit_project.ip_user_files/sim_scripts -force -quiet
+set_property -dict [list CONFIG.target_clock_frequency {100} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_ips xfft_2]
+generate_target all [get_files  D:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_2.xci]
+export_ip_user_files -of_objects [get_files D:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_2.xci] -no_script -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/V_project/IP/ad_fft/src/xfft_2/xfft_2.xci] -directory D:/FPGA/V_project/IP/ad_fft/tmp_edit_project.ip_user_files/sim_scripts -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1

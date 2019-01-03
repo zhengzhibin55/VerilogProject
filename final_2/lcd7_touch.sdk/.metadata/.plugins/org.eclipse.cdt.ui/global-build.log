@@ -1,0 +1,2045 @@
+10:56:28 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:56:48 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:58:26 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254496	   3152	232790268	233047916	de4076c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:58:48 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:05:14 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:32:37 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:40:04 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:42:16 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:43:31 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254488	   3152	232790268	233047908	de40764	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:43:52 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254488	   3152	232790268	233047908	de40764	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:44:11 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254496	   3152	232790268	233047916	de4076c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:44:16 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254496	   3152	232790268	233047916	de4076c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:44:25 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254496	   3152	232790268	233047916	de4076c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:46:22 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:53:29 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254496	   3152	232790268	233047916	de4076c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:54:30 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:55:54 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254288	   3152	232790268	233047708	de4069c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:56:05 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:38:23 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:18:10: warning: variable 'tep' set but not used [-Wunused-but-set-variable]
+     char tep;
+          ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 225308	   3024	232790260	233018592	de394e0	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:38:49 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254352	   3152	232790268	233047772	de406dc	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:39:40 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:41:11 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:42:49 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:44:06 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254352	   3152	232790268	233047772	de406dc	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:44:21 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+15:26:25 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254352	   3152	232790268	233047772	de406dc	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+15:26:34 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254352	   3152	132126972	132384476	7e406dc	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+16:22:06 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+17:37:36 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:33:1: error: expected declaration or statement at end of input
+ }
+ ^
+../src/display_demo.c:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/display_demo.o] 错误 1
+17:37:57 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254280	   3152	132126972	132384404	7e40694	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+17:38:41 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+17:39:56 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+18:48:23 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254280	   3152	132126972	132384404	7e40694	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+18:49:31 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:20:5: error: expected ',' or ';' before 's32'
+     s32 a;
+     ^
+../src/display_demo.c:19:9: warning: unused variable 'num' [-Wunused-variable]
+     u16 num=0
+         ^
+make: *** [src/display_demo.o] 错误 1
+18:51:22 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:20:5: error: expected ',' or ';' before 's32'
+     s32 a;
+     ^
+../src/display_demo.c:33:10: error: 'a' undeclared (first use in this function)
+          a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+          ^
+../src/display_demo.c:33:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/display_demo.c: At top level:
+../src/display_demo.c:49:10: error: expected identifier or '(' before 'else'
+         }else if(tep==68){
+          ^
+../src/display_demo.c:71:9: error: expected identifier or '(' before '}' token
+         }
+         ^
+../src/display_demo.c:72:6: error: expected identifier or '(' before 'return'
+      return 0;
+      ^
+../src/display_demo.c:73:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:49:9: warning: control reaches end of non-void function [-Wreturn-type]
+         }else if(tep==68){
+         ^
+make: *** [src/display_demo.o] 错误 1
+18:51:32 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:20:5: error: expected ',' or ';' before 's32'
+     s32 a;
+     ^
+../src/display_demo.c:33:10: error: 'a' undeclared (first use in this function)
+          a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+          ^
+../src/display_demo.c:33:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/display_demo.c: At top level:
+../src/display_demo.c:49:10: error: expected identifier or '(' before 'else'
+         }else if(tep==68){
+          ^
+../src/display_demo.c:72:6: error: expected identifier or '(' before 'return'
+      return 0;
+      ^
+../src/display_demo.c:73:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:49:9: warning: control reaches end of non-void function [-Wreturn-type]
+         }else if(tep==68){
+         ^
+make: *** [src/display_demo.o] 错误 1
+18:52:00 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:20:5: error: expected ',' or ';' before 's32'
+     s32 a;
+     ^
+../src/display_demo.c:33:10: error: 'a' undeclared (first use in this function)
+          a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+          ^
+../src/display_demo.c:33:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/display_demo.o] 错误 1
+18:53:05 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:18:5: error: expected ',' or ';' before 's32'
+     s32 a;
+     ^
+../src/display_demo.c:31:10: error: 'a' undeclared (first use in this function)
+          a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+          ^
+../src/display_demo.c:31:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/display_demo.o] 错误 1
+18:53:22 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:20:5: error: expected ',' or ';' before 's32'
+     s32 a;
+     ^
+../src/display_demo.c:33:10: error: 'a' undeclared (first use in this function)
+          a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+          ^
+../src/display_demo.c:33:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/display_demo.o] 错误 1
+18:53:34 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:19:5: error: stray '\243' in program
+     u16 num=0；
+     ^
+../src/display_demo.c:19:5: error: stray '\273' in program
+../src/display_demo.c:20:5: error: expected ',' or ';' before 's32'
+     s32 a;
+     ^
+../src/display_demo.c:33:10: error: 'a' undeclared (first use in this function)
+          a = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+          ^
+../src/display_demo.c:33:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/display_demo.o] 错误 1
+18:53:40 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:66:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:66:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254472	   3152	132126972	132384596	7e40754	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+18:54:28 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:43:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:43:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:65:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:65:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254472	   3152	132126972	132384596	7e40754	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+18:54:31 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:43:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:43:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:65:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:65:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254472	   3152	132126972	132384596	7e40754	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+18:54:52 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254472	   3152	132126972	132384596	7e40754	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+18:56:05 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254472	   3152	132126972	132384596	7e40754	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+18:56:45 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+18:57:59 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+18:59:22 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254472	   3152	132126972	132384596	7e40754	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+19:12:01 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:67:7: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+       usleep(1000 * 500); //sleep 0.5s
+       ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254536	   3152	132126972	132384660	7e40794	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+19:12:29 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:64:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:67:7: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+       usleep(1000 * 500); //sleep 0.5s
+       ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254536	   3152	132126972	132384660	7e40794	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+19:12:42 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:63:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:63:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:66:7: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+       usleep(1000 * 500); //sleep 0.5s
+       ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254536	   3152	132126972	132384660	7e40794	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+19:14:25 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:16:09 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:16:58 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:26:06 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:29:11 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:63:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:63:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:66:7: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+       usleep(1000 * 500); //sleep 0.5s
+       ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254544	   3152	132126972	132384668	7e4079c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+19:29:38 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:33:46 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:34:59 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:41:00 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:41:59 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:43:22 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:44:46 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                    printf( "%d \n", a);
+                    ^
+../src/display_demo.c:44:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:63:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                      printf( "%d \n", a);
+                      ^
+../src/display_demo.c:63:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:66:7: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+       usleep(1000 * 1000); //sleep 1s
+       ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254544	   3152	132126972	132384668	7e4079c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+19:59:34 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:10: error: 'true' undeclared (first use in this function)
+    while(true){
+          ^
+../src/display_demo.c:24:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                       printf( "%d \n", a);
+                       ^
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:65:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                         printf( "%d \n", a);
+                         ^
+../src/display_demo.c:65:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:68:10: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+          usleep(1000 * 1000); //sleep 1s
+          ^
+make: *** [src/display_demo.o] 错误 1
+19:59:40 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:10: error: 'True' undeclared (first use in this function)
+    while(True){
+          ^
+../src/display_demo.c:24:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                       printf( "%d \n", a);
+                       ^
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:65:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                         printf( "%d \n", a);
+                         ^
+../src/display_demo.c:65:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:68:10: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+          usleep(1000 * 1000); //sleep 1s
+          ^
+make: *** [src/display_demo.o] 错误 1
+19:59:47 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                       printf( "%d \n", a);
+                       ^
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:65:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                         printf( "%d \n", a);
+                         ^
+../src/display_demo.c:65:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:68:10: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+          usleep(1000 * 1000); //sleep 1s
+          ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254480	   3152	132126972	132384604	7e4075c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+20:00:34 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+20:11:58 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+20:15:08 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+20:16:21 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+20:17:50 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:25:5: warning: statement with no effect [-Wunused-value]
+     num==0;
+     ^
+../src/display_demo.c:42:11: warning: statement with no effect [-Wunused-value]
+           num==0;
+           ^
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                       printf( "%d \n", a);
+                       ^
+../src/display_demo.c:46:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:62:14: warning: statement with no effect [-Wunused-value]
+              num==0;
+              ^
+../src/display_demo.c:66:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                         printf( "%d \n", a);
+                         ^
+../src/display_demo.c:66:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:69:10: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+          usleep(1000 * 1000); //sleep 1s
+          ^
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254480	   3152	132126972	132384604	7e4075c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+20:18:14 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:01:04 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:3: warning: statement with no effect [-Wunused-value]
+   num==0;
+   ^
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:44:4: warning: statement with no effect [-Wunused-value]
+    num==0;
+    ^
+../src/display_demo.c:48:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:48:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:65:5: warning: statement with no effect [-Wunused-value]
+     num==0;
+     ^
+../src/display_demo.c:69:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:69:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254888	   3152	132126972	132385012	7e408f4	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:01:43 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:17:02 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:3: warning: statement with no effect [-Wunused-value]
+   num==0;
+   ^
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:44:4: warning: statement with no effect [-Wunused-value]
+    num==0;
+    ^
+../src/display_demo.c:48:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:48:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:65:5: warning: statement with no effect [-Wunused-value]
+     num==0;
+     ^
+../src/display_demo.c:70:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:70:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255088	   3152	132126972	132385212	7e409bc	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:17:22 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:3: warning: statement with no effect [-Wunused-value]
+   num==0;
+   ^
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:44:4: warning: statement with no effect [-Wunused-value]
+    num==0;
+    ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:66:5: warning: statement with no effect [-Wunused-value]
+     num==0;
+     ^
+../src/display_demo.c:71:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:71:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255096	   3152	132126972	132385220	7e409c4	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:19:50 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:3: warning: statement with no effect [-Wunused-value]
+   num==0;
+   ^
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:44:4: warning: statement with no effect [-Wunused-value]
+    num==0;
+    ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:69:5: warning: statement with no effect [-Wunused-value]
+     num==0;
+     ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255160	   3152	132126972	132385284	7e40a04	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:20:04 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:3: warning: statement with no effect [-Wunused-value]
+   num==0;
+   ^
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:44:4: warning: statement with no effect [-Wunused-value]
+    num==0;
+    ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:69:5: warning: statement with no effect [-Wunused-value]
+     num==0;
+     ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254888	   3152	132126972	132385012	7e408f4	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:20:23 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:21:36 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:24:3: warning: statement with no effect [-Wunused-value]
+   num==0;
+   ^
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:44:4: warning: statement with no effect [-Wunused-value]
+    num==0;
+    ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:69:5: warning: statement with no effect [-Wunused-value]
+     num==0;
+     ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255160	   3152	132126972	132385284	7e40a04	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:23:10 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:32:38 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254952	   3152	132126972	132385076	7e40934	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:33:05 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:36:08 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:35:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:49:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:74:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254960	   3152	132126972	132385084	7e4093c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:36:31 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:41:52 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:50:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:50:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:76:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:76:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255304	   3152	132126972	132385428	7e40a94	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:42:10 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:44:21 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:46:21 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:50:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:50:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:76:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:76:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255240	   3152	132126972	132385364	7e40a54	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:46:39 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:07:12 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:43:00 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255304	   3152	132126972	132385428	7e40a94	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:43:17 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:44:53 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254960	   3152	132126972	132385084	7e4093c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:45:10 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+15:42:02 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254960	   3152	132126972	132385084	7e4093c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+15:43:20 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+15:45:19 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:34:25 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:80:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254960	   3152	132126972	132385084	7e4093c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+10:35:13 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+10:40:38 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:05:27 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:06:57 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:25:55 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:28:08 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:41:42 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:47:16 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+15:16:57 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+15:53:02 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+15:54:40 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:07:53 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:15:29 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:19:57 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:42:26 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:45:15 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+17:04:39 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+17:09:40 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+17:12:02 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+17:14:23 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:35:23 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:38:13 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+19:40:59 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:21:13 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:07:07 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:11:09 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:11:22 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:11:51 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+16:17:23 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.
+11:23:24 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:53:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:53:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:81:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:81:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 254960	   3152	132126972	132385084	7e4093c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:23:47 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:53:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:53:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:81:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:81:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255024	   3152	132126972	132385148	7e4097c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:24:18 **** Auto Build of configuration Debug for project lcd7_touch ****
+make all 
+'Building file: ../src/display_demo.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_demo.o" -I../../lcd7_touch_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_demo.d" -MT"src/display_demo.d" -o "src/display_demo.o" "../src/display_demo.c"
+In file included from ../src/display_demo.c:8:0:
+D:\study\c\la\complex_matric.h: In function 'c_max':
+D:\study\c\la\complex_matric.h:508:27: warning: unused variable 'imag' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                           ^
+D:\study\c\la\complex_matric.h:508:22: warning: unused variable 'real' [-Wunused-variable]
+  float  max1=0,max=0,real,imag;
+                      ^
+../src/display_demo.c: In function 'main':
+../src/display_demo.c:36:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+    usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+    ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+      printf( "%d \n", a);
+      ^
+../src/display_demo.c:52:6: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+../src/display_demo.c:81:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+                 printf( "%d \n", a);
+                 ^
+../src/display_demo.c:81:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 's32' [-Wformat=]
+'Finished building: ../src/display_demo.c'
+' '
+'Building target: lcd7_touch.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lcd7_touch_bsp/ps7_cortexa9_0/lib -o "lcd7_touch.elf"  ./src/touch/touch.o  ./src/i2c/PS_i2c.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/PS_timer.o ./src/display_demo.o ./src/ugui.o ./src/zynq_interrupt.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lcd7_touch.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size lcd7_touch.elf  |tee "lcd7_touch.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 255024	   3152	132126972	132385148	7e4097c	lcd7_touch.elf
+'Finished building: lcd7_touch.elf.size'
+' '
+11:25:11 **** Incremental Build of configuration Debug for project lcd7_touch ****
+make all 
+make: Nothing to be done for `all'.

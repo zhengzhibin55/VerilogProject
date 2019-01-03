@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Nov 21 20:45:40 2018
+# Process ID: 7376
+# Current directory: D:/FPGA/V_project/final_2/lcd7_touch.runs/synth_1
+# Command line: vivado.exe -log system_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+# Log file: D:/FPGA/V_project/final_2/lcd7_touch.runs/synth_1/system_wrapper.vds
+# Journal file: D:/FPGA/V_project/final_2/lcd7_touch.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace

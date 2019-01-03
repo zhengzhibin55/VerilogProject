@@ -1,0 +1,67 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Nov 21 09:07:44 2018
+| Host         : zheng-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file fft_reset1_control_sets_placed.rpt
+| Design       : fft_reset1
+| Device       : xc7z020
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    14 |
+| Minimum Number of register sites lost to control set restrictions |    50 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              14 |            7 |
+| Yes          | No                    | No                     |              17 |            3 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             118 |           33 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------+----------------------+------------------+----------------+
+|  Clock Signal  |       Enable Signal      |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++----------------+--------------------------+----------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                          |                      |                1 |              1 |
+|  clk_IBUF_BUFG |                          | p_0_in               |                2 |              4 |
+|  clk_IBUF_BUFG | count[3]_i_2_n_0         | p_0_in               |                1 |              4 |
+|  clk_IBUF_BUFG | relay[11]_i_1__0_n_0     | relay[14]_i_1__0_n_0 |                1 |              6 |
+|  clk_IBUF_BUFG | f2/reset_i[5]_i_1__0_n_0 | f2/SR[0]             |                2 |              6 |
+|  clk_IBUF_BUFG | f2/i[5]_i_1__0_n_0       | f2/SR[0]             |                2 |              6 |
+|  clk_IBUF_BUFG | f1/reset_i[5]_i_1_n_0    | f2/SR[0]             |                1 |              6 |
+|  clk_IBUF_BUFG | f1/i[5]_i_2_n_0          | f2/SR[0]             |                4 |              6 |
+|  clk_IBUF_BUFG | f1/relay[11]_i_1_n_0     | f2/SR[0]             |                3 |              9 |
+|  clk_IBUF_BUFG |                          | f2/SR[0]             |                5 |             10 |
+|  clk_IBUF_BUFG | f2/relay[14]_i_1_n_0     | f2/SR[0]             |                4 |             15 |
+|  clk_IBUF_BUFG | relay[11]_i_1__0_n_0     |                      |                3 |             17 |
+|  clk_IBUF_BUFG | f2/count[29]_i_1__0_n_0  | f2/SR[0]             |                8 |             30 |
+|  clk_IBUF_BUFG | f1/count[29]_i_1_n_0     | f2/SR[0]             |                7 |             30 |
++----------------+--------------------------+----------------------+------------------+----------------+
+
+

@@ -1,0 +1,477 @@
+
+*** Running vivado
+    with args -log ram1.vds -m64 -mode batch -messageDb vivado.pb -notrace -source ram1.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source ram1.tcl -notrace
+Command: synth_design -top ram1 -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 487.480 ; gain = 314.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ram1' [D:/FPGA/V_project/IP/ram1/src/ram1.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ram1' (1#1) [D:/FPGA/V_project/IP/ram1/src/ram1.v:22]
+WARNING: [Synth 8-3917] design ram1 has port rsta driven by constant 0
+WARNING: [Synth 8-3917] design ram1 has port rstb driven by constant 0
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[31]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[30]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[29]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[28]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[27]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[26]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[25]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[24]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[23]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[22]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[21]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[20]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[19]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[18]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[17]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[16]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[15]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[14]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[13]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[12]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[11]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[10]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[9]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[8]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[7]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[6]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[5]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[4]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[3]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[2]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[1]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[0]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[31]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[30]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[29]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[28]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[27]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[26]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[25]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[24]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[23]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[22]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[21]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[20]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[19]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[18]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[17]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[16]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[15]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[14]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[13]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[12]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[11]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[10]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[9]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[8]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[7]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[6]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[5]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[4]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[3]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[2]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[1]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 487.480 ; gain = 314.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 487.480 ; gain = 314.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 487.480 ; gain = 314.707
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-802] inferred FSM for state register 'i_reg' in module 'ram1'
+INFO: [Synth 8-5546] ROM "addra" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ena" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wea" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enb" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                            00001 |                              000
+                 iSTATE0 |                            00010 |                              001
+                 iSTATE1 |                            00100 |                              010
+                 iSTATE2 |                            01000 |                              011
+                 iSTATE3 |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'i_reg' using encoding 'one-hot' in module 'ram1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 487.480 ; gain = 314.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ram1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 584.129 ; gain = 411.355
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design ram1 has port rsta driven by constant 0
+WARNING: [Synth 8-3917] design ram1 has port rstb driven by constant 0
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[31]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[30]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[29]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[28]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[27]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[26]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[25]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[24]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[23]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[22]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[21]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[20]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[19]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[18]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[17]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[16]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[15]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[14]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[13]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[12]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[11]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[10]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[9]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[8]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[7]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[6]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[5]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[4]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[3]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[2]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[1]
+WARNING: [Synth 8-3331] design ram1 has unconnected port douta[0]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[31]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[30]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[29]
+WARNING: [Synth 8-3331] design ram1 has unconnected port doutb[28]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 585.410 ; gain = 412.637
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 585.410 ; gain = 412.637
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance '\web_reg[0] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\web_reg[1] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\web_reg[2] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\web_reg[3] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[0] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[1] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[2] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[3] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[4] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[5] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[6] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[7] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[8] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[9] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[10] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[11] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[12] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[13] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[14] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[15] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[16] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[17] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[18] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[19] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[20] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[21] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[22] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[23] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[24] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[25] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[26] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[27] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[28] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[29] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3886] merging instance '\dinb_reg[30] ' (FDRE) to '\dinb_reg[31] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dinb_reg[31] )
+INFO: [Synth 8-3886] merging instance '\wea_reg[0] ' (FDRE) to '\wea_reg[1] '
+INFO: [Synth 8-3886] merging instance '\wea_reg[1] ' (FDRE) to '\wea_reg[2] '
+INFO: [Synth 8-3886] merging instance '\wea_reg[2] ' (FDRE) to '\wea_reg[3] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\dina_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\addra_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\addra_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (\addrb_reg[0] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\addra_reg[0] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\addra_reg[1] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dina_reg[0] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\wea_reg[2] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\wea_reg[1] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\wea_reg[0] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[31] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\web_reg[0] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\web_reg[1] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\web_reg[2] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\web_reg[3] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[0] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[1] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[2] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[3] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[4] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[5] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[6] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[7] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[8] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[9] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[10] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[11] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[12] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[13] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[14] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[15] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[16] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[17] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[18] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[19] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[20] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[21] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[22] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[23] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[24] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[25] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[26] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[27] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[28] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[29] ) is unused and will be removed from module ram1.
+WARNING: [Synth 8-3332] Sequential element (\dinb_reg[30] ) is unused and will be removed from module ram1.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 604.500 ; gain = 431.727
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 604.500 ; gain = 431.727
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    24|
+|3     |LUT1   |    94|
+|4     |LUT2   |    33|
+|5     |LUT3   |     5|
+|6     |LUT4   |     3|
+|7     |LUT5   |     6|
+|8     |LUT6   |     5|
+|9     |FDRE   |   109|
+|10    |FDSE   |     1|
+|11    |IBUF   |     2|
+|12    |OBUF   |   142|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   425|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 175 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 604.500 ; gain = 117.020
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 604.500 ; gain = 431.727
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 743.004 ; gain = 536.762
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 743.004 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 03 15:38:40 2018...

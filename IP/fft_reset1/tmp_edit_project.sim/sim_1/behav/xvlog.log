@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA/V_project/IP/fft_reset1/src/reset2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reset2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA/V_project/IP/fft_reset1/src/reset1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reset1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA/V_project/IP/fft_reset1/src/fft_reset1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft_reset1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA/V_project/IP/fft_reset1/tmp_edit_project.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA/V_project/IP/fft_reset1/tmp_edit_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,1372 @@
+/************************************************************************/
+/*																		*/
+/*	display_demo.c	--	ALINX AX7010 HDMI Display demonstration 						*/
+/*																		*/
+/************************************************************************/
+
+/* ------------------------------------------------------------ */
+/*				Include File Definitions						*/
+/* ------------------------------------------------------------ */
+#include "display_demo.h"
+#include "display_ctrl/display_ctrl.h"
+#include <stdio.h>
+#include "math.h"
+#include <ctype.h>
+#include <stdlib.h>
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "xparameters.h"
+#include "pic_800_600.h"
+#include "ugui.h"
+#include "touch/touch.h"
+#include "xscutimer.h"
+
+#include<complex.h>
+#include"D:\study\c\la\complex_matric.h"
+
+#include "sleep.h"
+
+#include "xil_io.h"   //这个头文件下面包含很重要的IO读写函数
+
+/*
+ * XPAR redefines
+ */
+#define DYNCLK_BASEADDR XPAR_AXI_DYNCLK_0_BASEADDR
+#define VGA_VDMA_ID XPAR_AXIVDMA_0_DEVICE_ID
+#define DISP_VTC_ID XPAR_VTC_0_DEVICE_ID
+#define VID_VTC_IRPT_ID XPS_FPGA3_INT_ID
+#define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
+#define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
+/* ------------------------------------------------------------ */
+/*				Global Variables								*/
+/* ------------------------------------------------------------ */
+
+/*
+ * Display Driver structs
+ */
+DisplayCtrl dispCtrl;
+XAxiVdma vdma;
+
+/*
+ * Framebuffers for video data
+ */
+u8 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
+u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
+
+u32 *cpFrames;
+
+XScuTimer Timer;//timer
+
+UG_GUI gui ; // Global GUI structure
+/* ------------------------------------------------------------ */
+/*				Procedure Definitions							*/
+/* ------------------------------------------------------------ */
+
+u8 ReadBuffer[50];
+int touched_x1;
+int touched_y1;
+int current_x1;
+int current_y1;
+
+/* Window 1 18*/
+#define MAX_OBJECTS        18
+UG_WINDOW window_1;
+UG_OBJECT obj_buff_wnd_1[MAX_OBJECTS];
+
+
+
+UG_BUTTON button1_0;
+UG_BUTTON button1_1;
+UG_BUTTON button1_2;
+UG_BUTTON button1_3;
+UG_BUTTON button1_4;
+UG_BUTTON button1_5;
+UG_BUTTON button1_6;
+UG_BUTTON button1_7;
+UG_BUTTON button1_8;
+UG_BUTTON button1_9;
+
+UG_BUTTON button1_10;
+UG_BUTTON button1_11;
+UG_BUTTON button1_12;
+UG_BUTTON button1_13;
+
+UG_BUTTON button1_14;
+
+UG_TEXTBOX textbox_0;
+UG_TEXTBOX textbox_1;
+
+
+u8 str[1000];
+
+//////////全局变量//////////
+
+int line_flag=0;
+
+int xianshi_flag=0;   //控制显示界面
+
+int xianshi_i=0;
+int xianshi_n[10]={0};
+
+//////////////
+float Rg;
+
+float _Complex Zfou[6][1]={0};
+float _Complex Z1201[3][3]={0};
+
+float _Complex X0b[21][1]={0};
+float _Complex Z1202[6][6]={0};
+
+
+///////////全局变量///////////
+
+
+void xianshi(int n)
+{
+
+	xianshi_i=xianshi_i+1;
+	 switch(xianshi_i)
+	 {
+	     case 1:xianshi_n[0]=n;break;
+	     case 2:xianshi_n[1]=n;break;
+	     case 4:xianshi_n[2]=n;break;
+	     case 5:xianshi_n[3]=n;break;
+	     default: break;
+	 }
+
+	 switch(xianshi_i)
+	 {
+	    case 1:{
+			 sprintf(str,"length: %d\n",xianshi_n[0]);
+			  UG_TextboxSetText( &window_1, BTN_ID_13, str );break;
+		 }
+	    case 2:{
+	    		  sprintf(str,"length: %d%d\n",xianshi_n[0],xianshi_n[1]);
+	    		  UG_TextboxSetText( &window_1, BTN_ID_13, str );break;
+	    	 }
+	     case 3:{
+			  sprintf(str,"length: %d%d.\n",xianshi_n[0],xianshi_n[1]);
+			  UG_TextboxSetText( &window_1, BTN_ID_13, str );break;
+		 }
+	     case 4:{
+			  sprintf(str,"length: %d%d.%d\n",xianshi_n[0],xianshi_n[1],xianshi_n[2]);
+			  UG_TextboxSetText( &window_1, BTN_ID_13, str );break;
+		 }
+	     case 5:{
+			  sprintf(str,"length: %d%d.%d%d\n",xianshi_n[0],xianshi_n[1],xianshi_n[2],xianshi_n[3]);
+			  UG_TextboxSetText( &window_1, BTN_ID_13, str );break;
+		 }
+	     default: break;
+	 }
+
+}
+
+
+
+/* Callback function for the main menu */
+void window_1_callback( UG_MESSAGE* msg )
+{
+
+   if ( msg->type == MSG_TYPE_OBJECT )
+   {
+      if ( msg->id == OBJ_TYPE_BUTTON )
+      {
+         switch( msg->sub_id )
+         {
+            case BTN_ID_0: /* 0 */
+            {
+            	xianshi(0);break;
+            }
+            case BTN_ID_1: /* 1 */
+            {
+            	 xianshi(1);break;
+            }
+            case BTN_ID_2: /* 2 */
+            {
+            	 xianshi(2);break;
+            }
+            case BTN_ID_3: /* 3 */
+            {
+            	 xianshi(3);break;
+            }
+            case BTN_ID_4: /* 4 */
+            {
+            	 xianshi(4);break;
+            }
+            case BTN_ID_5: /* 5 */
+           {
+        	   xianshi(5);break;
+            }
+            case BTN_ID_6: /* 6 */
+            {
+            	 xianshi(6);break;
+            }
+            case BTN_ID_7: /* 7 */
+            {
+            	 xianshi(7);break;
+            }
+            case BTN_ID_8: /*8*/
+            {
+            	 xianshi(8);break;
+            }
+            case BTN_ID_9: /* 9 */
+            {
+            	 xianshi(9);break;
+            }
+            case BTN_ID_10: /* . */
+            {
+            	 xianshi(10);break;
+            }
+            case BTN_ID_11: /* single/double */
+           {
+
+               if(!line_flag)
+			   {
+				   UG_ButtonSetText( &window_1, BTN_ID_11, "double" );
+				   line_flag=1;
+			   }
+			   else
+			   {
+				   UG_ButtonSetText( &window_1, BTN_ID_11, "single" );
+				   line_flag=0;
+			   }
+			break;
+
+            }
+
+
+ 		   case BTN_ID_16: /* =>ABC   =>120 */
+            {
+
+                if(!xianshi_flag)
+ 			   {
+ 				   UG_ButtonSetText( &window_1, BTN_ID_16, "=>ABC" );
+ 				   xianshi_flag=1;
+ 			   }
+ 			   else
+ 			   {
+ 				   UG_ButtonSetText( &window_1, BTN_ID_16, "=>120" );
+ 				   xianshi_flag=0;
+ 			   }
+
+ 			   if((line_flag==0)&&(xianshi_flag==0))  //单回 ABC
+ 			   {
+ 			UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_12X20 );
+ 			  sprintf(str,"ABC(Re):\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  ABC(Im):\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  Rg=%3.2f"\
+ 					  ,creal(Zfou[0][0]),creal(Zfou[3][0]),creal(Zfou[5][0])\
+ 					  ,creal(Zfou[3][0]),creal(Zfou[1][0]),creal(Zfou[4][0])\
+ 					  ,creal(Zfou[5][0]),creal(Zfou[4][0]),creal(Zfou[2][0])\
+ 					  ,cimag(Zfou[0][0]),cimag(Zfou[3][0]),cimag(Zfou[5][0])\
+ 					  ,cimag(Zfou[3][0]),cimag(Zfou[1][0]),cimag(Zfou[4][0])\
+ 					  ,cimag(Zfou[5][0]),cimag(Zfou[4][0]),cimag(Zfou[2][0])\
+ 					  ,Rg
+ 			  );
+ 				 UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+ 			   }
+ 			   else if((line_flag==0)&&(xianshi_flag==1)) //单回 120
+ 			   {
+ 			UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_12X20 );
+ 			  sprintf(str,"120(Re):\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  120(Im):\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f\n\
+ 					  Rg=%3.2f"\
+ 					  ,creal(Z1201[0][0]),creal(Z1201[0][1]),creal(Z1201[0][2])\
+ 					  ,creal(Z1201[1][0]),creal(Z1201[1][1]),creal(Z1201[1][2])\
+ 					  ,creal(Z1201[2][0]),creal(Z1201[2][1]),creal(Z1201[2][2])\
+ 					  ,cimag(Z1201[0][0]),cimag(Z1201[0][1]),cimag(Z1201[0][2])\
+ 					  ,cimag(Z1201[1][0]),cimag(Z1201[1][1]),cimag(Z1201[1][2])\
+ 					  ,cimag(Z1201[2][0]),cimag(Z1201[2][1]),cimag(Z1201[2][2])\
+ 					  ,Rg
+ 			  );
+ 				   UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+ 			   }
+ 			   else if((line_flag==1)&&(xianshi_flag==0)) //双回 ABC
+ 			   {
+ 			UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_10X16 );
+ 			 sprintf(str,"ABC(Re):\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  ABC(Im):\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  Rg=%3.2f"\
+
+ 					,creal(X0b[0][0]),creal(X0b[1][0]),creal(X0b[2][0]),creal(X0b[3][0]),creal(X0b[4][0]),creal(X0b[5][0])\
+ 					,creal(X0b[1][0]),creal(X0b[6][0]),creal(X0b[7][0]),creal(X0b[8][0]),creal(X0b[9][0]),creal(X0b[10][0])\
+ 					,creal(X0b[2][0]),creal(X0b[7][0]),creal(X0b[11][0]),creal(X0b[12][0]),creal(X0b[13][0]),creal(X0b[14][0])\
+ 					,creal(X0b[3][0]),creal(X0b[8][0]),creal(X0b[12][0]),creal(X0b[15][0]),creal(X0b[16][0]),creal(X0b[17][0])\
+ 					,creal(X0b[4][0]),creal(X0b[9][0]),creal(X0b[13][0]),creal(X0b[16][0]),creal(X0b[18][0]),creal(X0b[19][0])\
+ 					,creal(X0b[5][0]),creal(X0b[10][0]),creal(X0b[14][0]),creal(X0b[17][0]),creal(X0b[19][0]),creal(X0b[20][0])\
+ 					 ,cimag(X0b[0][0]),cimag(X0b[1][0]),cimag(X0b[2][0]),cimag(X0b[3][0]),cimag(X0b[4][0]),cimag(X0b[5][0])\
+ 					,cimag(X0b[1][0]),cimag(X0b[6][0]),cimag(X0b[7][0]),cimag(X0b[8][0]),cimag(X0b[9][0]),cimag(X0b[10][0])\
+ 					,cimag(X0b[2][0]),cimag(X0b[7][0]),cimag(X0b[11][0]),cimag(X0b[12][0]),cimag(X0b[13][0]),cimag(X0b[14][0])\
+ 					,cimag(X0b[3][0]),cimag(X0b[8][0]),cimag(X0b[12][0]),cimag(X0b[15][0]),cimag(X0b[16][0]),cimag(X0b[17][0])\
+ 					,cimag(X0b[4][0]),cimag(X0b[9][0]),cimag(X0b[13][0]),cimag(X0b[16][0]),cimag(X0b[18][0]),cimag(X0b[19][0])\
+ 					,cimag(X0b[5][0]),cimag(X0b[10][0]),cimag(X0b[14][0]),cimag(X0b[17][0]),cimag(X0b[19][0]),cimag(X0b[20][0])\
+ 					,Rg
+ 			  );
+ 				   UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+ 			   }
+ 			else if((line_flag==1)&&(xianshi_flag==1)) //双回 120
+ 				{
+
+ UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_10X16 );
+ 			 sprintf(str,"120(Re):\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  120(Im):\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+ 					  Rg=%3.2f"\
+
+ 					,creal(Z1202[0][0]),creal(Z1202[0][1]),creal(Z1202[0][2]),creal(Z1202[0][3]),creal(Z1202[0][4]),creal(Z1202[0][5])\
+ 					,creal(Z1202[1][0]),creal(Z1202[1][1]),creal(Z1202[1][2]),creal(Z1202[1][3]),creal(Z1202[1][4]),creal(Z1202[1][5])\
+ 					,creal(Z1202[2][0]),creal(Z1202[2][1]),creal(Z1202[2][2]),creal(Z1202[2][3]),creal(Z1202[2][4]),creal(Z1202[2][5])\
+ 					,creal(Z1202[3][0]),creal(Z1202[3][1]),creal(Z1202[3][2]),creal(Z1202[3][3]),creal(Z1202[3][4]),creal(Z1202[3][5])\
+ 					,creal(Z1202[4][0]),creal(Z1202[4][1]),creal(Z1202[4][2]),creal(Z1202[4][3]),creal(Z1202[4][4]),creal(Z1202[4][5])\
+ 					,creal(Z1202[5][0]),creal(Z1202[5][1]),creal(Z1202[5][2]),creal(Z1202[5][3]),creal(Z1202[5][4]),creal(Z1202[5][5])\
+ 					,cimag(Z1202[0][0]),cimag(Z1202[0][1]),cimag(Z1202[0][2]),cimag(Z1202[0][3]),cimag(Z1202[0][4]),cimag(Z1202[0][5])\
+ 					,cimag(Z1202[1][0]),cimag(Z1202[1][1]),cimag(Z1202[1][2]),cimag(Z1202[1][3]),cimag(Z1202[1][4]),cimag(Z1202[1][5])\
+ 					,cimag(Z1202[2][0]),cimag(Z1202[2][1]),cimag(Z1202[2][2]),cimag(Z1202[2][3]),cimag(Z1202[2][4]),cimag(Z1202[2][5])\
+ 					,cimag(Z1202[3][0]),cimag(Z1202[3][1]),cimag(Z1202[3][2]),cimag(Z1202[3][3]),cimag(Z1202[3][4]),cimag(Z1202[3][5])\
+ 					,cimag(Z1202[4][0]),cimag(Z1202[4][1]),cimag(Z1202[4][2]),cimag(Z1202[4][3]),cimag(Z1202[4][4]),cimag(Z1202[4][5])\
+ 					,cimag(Z1202[5][0]),cimag(Z1202[5][1]),cimag(Z1202[5][2]),cimag(Z1202[5][3]),cimag(Z1202[5][4]),cimag(Z1202[5][5])\
+ 					,Rg
+ 			  );
+
+ 					UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+
+
+ 				}
+
+ 			   else
+ 			   {
+ 				   UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_10X16 );
+ 				  sprintf(str,"WRONE");
+ 				 UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+
+
+ 			   }
+
+
+
+ 			break;
+
+             }
+
+
+
+
+
+
+
+
+
+
+            case BTN_ID_12: /* ok */
+           {
+
+
+
+
+////////////////////////////////
+u16 num=0;
+s32 a1;
+s32 a2;
+
+printf("------The test is start...------\n\r");
+
+if(line_flag==0)
+	Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 7000, 0x0f0f0f01);
+else
+	Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 7000, 0x0f0f0f02);
+
+
+
+
+
+
+
+
+
+
+//延时
+usleep(1000 * 500); //sleep 0.5s 确定FPGA收到信号
+Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 7000, 0);
+
+
+
+    //XPAR_AXI_BRAM_CTRL_1_S_AXI_BASEADDR是axi_bram_ctrl_1的地址，Xil_In32 通过控制axi_bram_ctrl_0，把blk_mem_gen_0里的数据读出来
+    //PS和PL可以在blk_mem_gen_0里共享数据
+
+	while(num==0)
+	{
+
+		a1 = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 8000);
+		if ((a1==0xF0F0F0F2)||(a1==0xF0F0F0F1))
+		{
+			num=1;
+		}
+	}
+
+float L=xianshi_n[0]*10+xianshi_n[1]+xianshi_n[2]*0.1+xianshi_n[3]*0.01;
+
+//矩阵转换
+float tepT=0.866025403784439;
+float invT1=0.333333333333333,invT2=0.166666666666667,invT3=0.288675134594813;
+
+
+//线路矩阵 5个参数 146个int输出（添加一个单双判断位）
+
+
+
+
+
+////////////////////////////单回////////////////////////////////////////////////
+////////////////////////////单回///////////////////////////////////////////////
+////////////////////////////单回/////////////////////////////////////////////
+////////////////////////////单回/////////////////////////////////////////////////
+int i=0;
+int j=0;
+
+
+
+if(a1==0xF0F0F0F1)
+
+{
+
+/////////////////////////////变量区//////////////////////////////////////////////
+//读数
+int j1=0,j2=0;
+int dt[168];        //存储数据
+float _Complex b[84];    //存储复数数据
+float _Complex b1[42];    //存储复数数据
+float _Complex b2[42];    //存储复数数据
+float _Complex b3[42];    //存储复数数据
+int Rem;//Remainder是余数
+
+//产生矩阵
+float _Complex Ia7,Ib7,Ic7,Ia8,Ib8,Ic8,Ia9,Ib9,Ic9;
+
+//逐步加权最小二乘
+int m,n;      //行列
+int FLAG1=1,FLAG2=1;      //是否可逆标志位
+
+
+float MAX=1;       //先进入循环然后赋值
+
+
+
+
+float _Complex T[3][3]={{1+0I,1+0I,1+0I},
+                        {-0.5-tepT*I,-0.5+tepT*I,1+0I},
+                        {-0.5+tepT*I,-0.5-tepT*I,1+0I}};
+float _Complex invT[3][3]={{invT1+0I,-invT2+invT3*I,-invT2-invT3*I},
+                            {invT1+0I,-invT2-invT3*I,-invT2+invT3*I},
+                            {invT1+0I,invT1+0I,invT1+0I}};
+
+
+//电阻
+float Rgab1,Rgac1,Rgba1,Rgbc1,Rgca1,Rgcb1;
+
+//////////////////////////////读数//////////////////////////////////////////////
+
+	for(j=0;j<84;j++)
+       {
+            a1 = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + j*8+4);
+			a2 = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + j*8+8);
+			b[j]=a1-a2*I;
+       }
+
+//将b分成两组，即两组不同限流电阻下的数据
+
+for(j=0,j1=0,j2=0;j<84;j++)
+{
+    Rem=j%28;
+    if(Rem<14)
+    {
+        b1[j1]=b[j];j1=j1+1;
+    }
+    else
+    {
+        b2[j2]=b[j];j2=j2+1;
+    }
+}
+
+//变j2的赋值2为1
+//变j2的赋值2为1
+//变j2的赋值2为1
+//提取相位信息分别减去电源电压相位
+for(j1=0;j1<3;j1++)
+{
+    for(j2=1;j2<14;j2++)
+    {
+        b1[j1*14+j2]=b1[j1*14+j2]*(cos(carg(b1[j1*14]))-I*sin(carg(b1[j1*14])));
+        b2[j1*14+j2]=b2[j1*14+j2]*(cos(carg(b2[j1*14]))-I*sin(carg(b2[j1*14])));
+    }
+}
+
+c_jian(b3,b1,b2,42,1);
+
+
+//删除电流校正，添加段新的程序
+//删除电流校正，添加段新的程序
+//删除电流校正，添加段新的程序
+
+for(j1=0;j1<3;j1++)
+{
+    for(j2=0;j2<6;j2++)
+    {
+        b3[j1*14+7-j2]=b3[j1*14+6-j2];
+    }
+}
+
+//////////////////////////////产生矩阵//////////////////////////////////////////////
+//////////////电流数据
+
+//////A接地
+Ia7=b3[3];
+Ib7=0;
+Ic7=0;
+//////B接地
+Ia8=0;
+Ib8=b3[14+5];
+Ic8=0;
+//////C接地
+Ia9=0;
+Ib9=0;
+Ic9=b3[2*14+7];
+
+
+//////////////////////////////////第二次///////////////////////////////////////////////
+
+float _Complex bfou[9];
+
+
+for(j=0;j<3;j++)
+{
+    bfou[j*3]=b3[j*14+2];
+	bfou[j*3+1]=b3[j*14+4];
+	bfou[j*3+2]=b3[j*14+6];
+}
+
+float _Complex Afou[9][6]={{Ia7,0,0,Ib7,0,Ic7},{0,Ib7,0,Ia7,Ic7,0},{0,0,Ic7,0,Ib7,Ia7},{Ia8,0,0,Ib8,0,Ic8},{0,Ib8,0,Ia8,Ic8,0},{0,0,Ic8,0,Ib8,Ia8},{Ia9,0,0,Ib9,0,Ic9},{0,Ib9,0,Ia9,Ic9,0},{0,0,Ic9,0,Ib9,Ia9}};
+
+//////////////////////////////////最小二乘
+m=9;n=6;
+float _Complex zhuan21[6][9],cheng21[6][6],ni21[6][6],cheng22[6][9],zhuan22[9][1],cheng23[6][1];
+c_zhuan2(zhuan21,Afou,m,n);
+c_cheng2(cheng21,zhuan21,6,9,Afou,9,6);
+FLAG1=c_ni(ni21,cheng21,n);
+c_cheng2(cheng22,ni21,6,6,zhuan21,6,9);
+c_zhuan2(zhuan22,bfou,1,m);
+c_cheng2(cheng23,cheng22,n,m,zhuan22,m,1);
+
+FLAG2=c_if(cheng23,6,1);
+
+c_copy(Zfou,cheng23,6,1);
+
+//求方差矩阵
+float  Wfou[9][9];
+
+//加权最小二乘  使用x'w代替x'
+float _Complex zhuan2[6][9];
+
+
+for(i=0;(i<50)&&FLAG1&&FLAG2&&(MAX>1e-5);i++)
+{
+//求方差矩阵
+c_fangcha(Wfou,bfou,Afou,9,6,cheng23);
+
+//加权最小二乘  使用x'w代替x'
+c_zhuan2(zhuan2,Afou,m,n);
+c_cheng3(zhuan21,zhuan2,6,9,Wfou,9,9);
+c_cheng2(cheng21,zhuan21,6,9,Afou,9,6);
+FLAG1=c_ni(ni21,cheng21,n);
+c_cheng2(cheng22,ni21,6,6,zhuan21,6,9);
+c_zhuan2(zhuan22,bfou,1,m);
+c_cheng2(cheng23,cheng22,n,m,zhuan22,m,1);
+
+FLAG2=c_if(cheng23,6,1);
+
+if(FLAG1&&FLAG2)
+    {
+        MAX=c_max(cheng23,Zfou,6,1);
+        c_copy(Zfou,cheng23,6,1);
+    }
+}
+
+//////////阻抗变换
+////单位线路阻抗
+for(i=0;i<6;i++)
+{
+    Zfou[i][0]=Zfou[i][0]/L;
+}
+
+////阻抗转换
+
+float _Complex Zabc[3][3]={{Zfou[0][0],Zfou[3][0],Zfou[5][0]},
+                            {Zfou[3][0],Zfou[1][0],Zfou[4][0]},
+                            {Zfou[5][0],Zfou[4][0],Zfou[2][0]}};
+
+float Ztep[3][3];
+
+c_cheng2(Ztep,invT,3,3,Zabc,3,3);
+
+c_cheng2(Z1201,Ztep,3,3,T,3,3);
+
+/////////////////////////////////地阻///////////////////////////////////////////////
+
+//////地阻 当单相接地时，另外两相的的电压就是地阻的电压
+//////A接地
+Rgab1=creal(b3[4]/Ia7);
+Rgac1=creal(b3[6]/Ia7);
+
+//////B接地
+Rgba1=creal(b3[14+2]/Ib8);
+Rgbc1=creal(b3[14+6]/Ib8);
+
+//////C接地
+Rgca1=creal(b3[2*14+2]/Ic9);
+Rgcb1=creal(b3[2*14+4]/Ic9);
+
+Rg=(Rgab1+Rgac1+Rgba1+Rgbc1+Rgca1+Rgcb1)/6;
+
+//添加比差校正程序
+//添加比差校正程序
+//添加比差校正程序
+
+for(i=0;i<6;i++)
+{
+    Zfou[i][0]=15.27*Zfou[i][0]+0.00831;
+}
+Rg=15.27*Rg+0.00831;
+
+//更改虚部的值
+//更改虚部的值
+//更改虚部的值
+
+Zfou[0][0]=creal(Zfou[0][0])+15.27*cimag(b3[2]/b3[3])*I;
+Zfou[1][0]=creal(Zfou[1][0])+15.27*cimag(b3[14+4]/b3[14+5])*I;
+Zfou[2][0]=creal(Zfou[2][0])+15.27*cimag(b3[14*2+6]/b3[14*2+7])*I;
+
+
+
+printf("the Zfou0 is %f+%f*i\n",creal(Zfou[0][0]),cimag(Zfou[0][0]));
+printf("the Zfou1 is %f+%f*i\n",creal(Zfou[1][0]),cimag(Zfou[1][0]));
+printf("the Zfou2 is %f+%f*i\n",creal(Zfou[2][0]),cimag(Zfou[2][0]));
+printf("the Zfou3 is %f+%f*i\n",creal(Zfou[3][0]),cimag(Zfou[3][0]));
+printf("the Zfou4 is %f+%f*i\n",creal(Zfou[4][0]),cimag(Zfou[4][0]));
+printf("the Zfou5 is %f+%f*i\n",creal(Zfou[5][0]),cimag(Zfou[5][0]));
+
+printf("the Rg is %f\n",Rg);
+
+}
+
+////////////////////////////双回////////////////////////////////////////////////
+////////////////////////////双回///////////////////////////////////////////////
+////////////////////////////双回/////////////////////////////////////////////
+////////////////////////////双回/////////////////////////////////////////////////
+
+
+
+else if(a1==0xF0F0F0F2)
+
+{
+
+/////////////////////////////变量区//////////////////////////////////////////////
+//读数
+int j1=0,j2=0;
+int dt[336];        //存储数据
+float _Complex b[168];    //存储复数数据
+float _Complex b1[84];    //存储复数数据
+float _Complex b2[84];    //存储复数数据
+float _Complex b3[84];    //存储复数数据
+int Rem;//Remainder是余数
+
+//产生矩阵
+float _Complex Ia1,Ib1,Ic1,Ia2,Ib2,Ic2,Ia3,Ib3,Ic3,Ia4,Ib4,Ic4,Ia5,Ib5,Ic5,Ia6,Ib6,Ic6,
+                IA1,IB1,IC1,IA2,IB2,IC2,IA3,IB3,IC3,IA4,IB4,IC4,IA5,IB5,IC5,IA6,IB6,IC6;
+//逐步加权最小二乘
+int m,n;      //行列
+int FLAG1=1,FLAG2=1;      //是否可逆标志位
+
+float MAX=1;       //先进入循环然后赋值
+
+//转变矩阵阵列
+
+
+float _Complex T[6][6]={{1+0I,1+0I,1+0I,0,0,0},
+                        {-0.5-tepT*I,-0.5+tepT*I,1+0I,0,0,0},
+                        {-0.5+tepT*I,-0.5-tepT*I,1+0I,0,0,0},
+						{0,0,0,1+0I,1+0I,1+0I},
+                        {0,0,0,-0.5-tepT*I,-0.5+tepT*I,1+0I},
+                        {0,0,0,-0.5+tepT*I,-0.5-tepT*I,1+0I}
+						};
+
+float _Complex invT[6][6]={{invT1+0I,-invT2+invT3*I,-invT2-invT3*I,0,0,0},
+                            {invT1+0I,-invT2-invT3*I,-invT2+invT3*I,0,0,0},
+                            {invT1+0I,invT1+0I,invT1+0I,0,0,0},
+							{0,0,0,invT1+0I,-invT2+invT3*I,-invT2-invT3*I},
+                            {0,0,0,invT1+0I,-invT2-invT3*I,-invT2+invT3*I},
+                            {0,0,0,invT1+0I,invT1+0I,invT1+0I}
+							};
+
+
+
+
+
+
+
+
+//电阻
+float Rga11,Rga12,Rga13,Rga14,Rga15,Rgb11,Rgb12,Rgb13,Rgb14,Rgb15,Rgc11,Rgc12,Rgc13,Rgc14,Rgc15,Rga21,Rga22,Rga23,Rga24,Rga25,Rgb21,Rgb22,Rgb23,Rgb24,Rgb25,Rgc21,Rgc22,Rgc23,Rgc24,Rgc25;
+
+//////////////////////////////读数//////////////////////////////////////////////
+
+	for(j=0;j<168;j++)
+       {
+            a1 = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + j*8+4);
+			a2 = Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + j*8+8);
+			b[j]=a1-a2*I;
+       }
+
+//将b分成两组，即两组不同限流电阻下的数据
+for(j=0,j1=0,j2=0;j<168;j++)
+{
+    Rem=j%28;
+    if(Rem<14)
+    {
+        b1[j1]=b[j];j1=j1+1;
+    }
+    else
+    {
+        b2[j2]=b[j];j2=j2+1;
+    }
+}
+
+//变j2的赋值2为1
+//变j2的赋值2为1
+//变j2的赋值2为1
+//提取相位信息分别减去电源电压相位
+for(j1=0;j1<6;j1++)
+{
+    for(j2=1;j2<14;j2++)
+    {
+        b1[j1*14+j2]=b1[j1*14+j2]*(cos(carg(b1[j1*14]))-I*sin(carg(b1[j1*14])));
+        b2[j1*14+j2]=b2[j1*14+j2]*(cos(carg(b2[j1*14]))-I*sin(carg(b2[j1*14])));
+    }
+}
+
+c_jian(b3,b1,b2,84,1);
+
+//删除电流校正，添加段新的程序
+//删除电流校正，添加段新的程序
+//删除电流校正，添加段新的程序
+
+for(j1=0;j1<6;j1++)
+{
+    for(j2=0;j2<6;j2++)
+    {
+        b3[j1*14+7-j2]=b3[j1*14+6-j2];
+    }
+}
+
+//////////////////////////////产生矩阵//////////////////////////////////////////////
+//////////////电流数据
+
+//////A接地
+Ia1=b3[0+3];
+Ib1=0;
+Ic1=0;
+IA1=0;
+IB1=0;
+IC1=0;
+//////B接地
+Ia2=0;
+Ib2=b3[14+5];
+Ic2=0;
+IA2=0;
+IB2=0;
+IC2=0;
+//////C接地
+Ia3=0;
+Ib3=0;
+Ic3=b3[2*14+7];
+IA3=0;
+IB3=0;
+IC3=0;
+//////A'接地
+Ia4=0;
+Ib4=0;
+Ic4=0;
+IA4=b3[3*14+9];
+IB4=0;
+IC4=0;
+//////B'接地
+Ia5=0;
+Ib5=0;
+Ic5=0;
+IA5=0;
+IB5=b3[4*14+11];
+IC5=0;
+//////C'接地
+Ia6=0;
+Ib6=0;
+Ic6=0;
+IA6=0;
+IB6=0;
+IC6=b3[5*14+13];
+
+/////////////////////////////////第二次/////////////////////////////////////////////
+/////////////////////////////////第二次////////////////////////////////////////////
+//////////////////////////////////第二次///////////////////////////////////////////////
+
+float _Complex Ub[36];
+
+
+for(j=0;j<6;j++)
+{
+    Ub[j*6]=b3[j*14+2];
+	Ub[j*6+1]=b3[j*14+4];
+	Ub[j*6+2]=b3[j*14+6];
+    Ub[j*6+3]=b3[j*14+8];
+	Ub[j*6+4]=b3[j*14+10];
+	Ub[j*6+5]=b3[j*14+12];
+}
+////给Ab赋值
+float _Complex Ab[36][21]={//A接地
+{Ia1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,Ia1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,Ia1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,Ia1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,Ia1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,Ia1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+//B接地
+{0,Ib2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,Ib2,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,Ib2,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,Ib2,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,Ib2,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,Ib2,0,0,0,0,0,0,0,0,0,0},
+//C接地
+{0,0,Ic3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,Ic3,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,Ic3,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,Ic3,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,Ic3,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,Ic3,0,0,0,0,0,0},
+//A'接地
+{0,0,0,IA4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,IA4,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,IA4,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IA4,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IA4,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IA4,0,0,0},
+//B'接地
+{0,0,0,0,IB5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,IB5,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,IB5,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IB5,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IB5,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IB5,0},
+//C'接地
+{0,0,0,0,0,IC6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,IC6,0,0,0,0,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,IC6,0,0,0,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IC6,0,0,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IC6,0},
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,IC6}
+};
+////给Ab赋值
+//////////////////////////////////最小二乘
+//////////////////////////////////最小二乘
+m=36;n=21;
+float _Complex zhuan21[21][36],cheng21[21][21],ni21[21][21],cheng22[21][36],zhuan22[36][1],cheng23[21][1];
+c_zhuan2(zhuan21,Ab,m,n);
+c_cheng2(cheng21,zhuan21,21,36,Ab,36,21);
+FLAG1=c_ni(ni21,cheng21,n);
+c_cheng2(cheng22,ni21,21,21,zhuan21,21,36);
+c_zhuan2(zhuan22,Ub,1,m);
+c_cheng2(cheng23,cheng22,n,m,zhuan22,m,1);
+
+FLAG2=c_if(cheng23,21,1);
+c_copy(X0b,cheng23,21,1);
+
+//求方差矩阵
+float  Wfou[36][36];
+
+//加权最小二乘  使用x'w代替x'
+float _Complex zhuan2[21][36];
+
+
+for(i=0;(i<50)&&FLAG1&&FLAG2&&(MAX>1e-5);i++)
+{
+//求方差矩阵
+c_fangcha(Wfou,Ub,Ab,36,21,cheng23);
+
+//加权最小二乘  使用x'w代替x'
+c_zhuan2(zhuan2,Ab,m,n);
+c_cheng3(zhuan21,zhuan2,21,36,Wfou,36,36);
+c_cheng2(cheng21,zhuan21,21,36,Ab,36,21);
+FLAG1=c_ni(ni21,cheng21,n);
+c_cheng2(cheng22,ni21,21,21,zhuan21,21,36);
+c_zhuan2(zhuan22,Ub,1,m);
+c_cheng2(cheng23,cheng22,n,m,zhuan22,m,1);
+
+FLAG2=c_if(cheng23,21,1);
+
+if(FLAG1&&FLAG2)
+    {
+        MAX=c_max(cheng23,X0b,21,1);
+        c_copy(X0b,cheng23,21,1);
+    }
+}
+
+//////////阻抗变换
+////单位线路阻抗
+for(i=0;i<21;i++)
+{
+    X0b[i][0]=X0b[i][0]/L;
+}
+
+////阻抗转换
+
+float _Complex Zabc[6][6]={{X0b[0][0],X0b[1][0],X0b[2][0],X0b[3][0],X0b[4][0],X0b[5][0]},
+							{X0b[1][0],X0b[6][0],X0b[7][0],X0b[8][0],X0b[9][0],X0b[10][0]},
+							{X0b[2][0],X0b[7][0],X0b[11][0],X0b[12][0],X0b[13][0],X0b[14][0]},
+							{X0b[3][0],X0b[8][0],X0b[12][0],X0b[15][0],X0b[16][0],X0b[17][0]},
+							{X0b[4][0],X0b[9][0],X0b[13][0],X0b[16][0],X0b[18][0],X0b[19][0]},
+							{X0b[5][0],X0b[10][0],X0b[14][0],X0b[17][0],X0b[19][0],X0b[20][0]}
+							};
+
+
+float _Complex Ztep[6][6];
+
+c_cheng2(Ztep,invT,6,6,Zabc,6,6);
+
+c_cheng2(Z1202,Ztep,6,6,T,6,6);
+
+
+
+/////////////////////////////////地阻/////////////////////////////////////////////
+
+Rga11=creal(b3[0+4]/Ia1);
+Rga12=creal(b3[0+6]/Ia1);
+Rga13=creal( b3[0+8]/Ia1);
+Rga14=creal(b3[0+10]/Ia1);
+Rga15=creal(b3[0+12]/Ia1);
+
+Rgb11=creal(b3[14+2]/Ib2);
+Rgb12=creal(b3[14+6]/Ib2);
+Rgb13=creal(b3[14+8]/Ib2);
+Rgb14=creal(b3[14+10]/Ib2);
+Rgb15=creal(b3[14+12]/Ib2);
+
+Rgc11=creal(b3[2*14+2]/Ic3);
+Rgc12=creal(b3[2*14+4]/Ic3);
+Rgc13=creal(b3[2*14+8]/Ic3);
+Rgc14=creal(b3[2*14+10]/Ic3);
+Rgc15=creal(b3[2*14+12]/Ic3);
+
+Rga21=creal(b3[3*14+2]/IA4);
+Rga22=creal(b3[3*14+4]/IA4);
+Rga23=creal(b3[3*14+6]/IA4);
+Rga24=creal(b3[3*14+10]/IA4);
+Rga25=creal(b3[3*14+12]/IA4);
+
+Rgb21=creal(b3[4*14+2]/IB5);
+Rgb22=creal(b3[4*14+4]/IB5);
+Rgb23=creal(b3[4*14+6]/IB5);
+Rgb24=creal(b3[4*14+8]/IB5);
+Rgb25=creal( b3[4*14+12]/IB5);
+
+Rgc21=creal(b3[5*14+2]/IC6);
+Rgc22=creal(b3[5*14+4]/IC6);
+Rgc23=creal(b3[5*14+6]/IC6);
+Rgc24=creal(b3[5*14+8]/IC6);
+Rgc25=creal(b3[5*14+10]/IC6);
+
+Rg=(Rga11+Rga12+Rga13+Rga14+Rga15+Rgb11+Rgb12+Rgb13+Rgb14
+    +Rgb15+Rgc11+Rgc12+Rgc13+Rgc14+Rgc15+Rga21+Rga22+Rga23
+    +Rga24+Rga25+Rgb21+Rgb22+Rgb23+Rgb24+Rgb25+Rgc21+Rgc22
+    +Rgc23+Rgc24+Rgc25)/30;
+
+///////////////////////////输出电阻和地阻////////////////////////////////////////////////////////////
+//添加比差校正程序
+//添加比差校正程序
+//添加比差校正程序
+
+for(i=0;i<21;i++)
+{
+    X0b[i][0]=15.33*X0b[i][0]+0.008153;
+}
+Rg=15.33*Rg+0.008153;
+
+//更改虚部的值
+//更改虚部的值
+//更改虚部的值
+
+X0b[0][0]=creal(X0b[0][0])+15.33*cimag(b3[2]/b3[3])*I;
+X0b[6][0]=creal(X0b[6][0])+15.33*cimag(b3[14+4]/b3[14+5])*I;
+X0b[11][0]=creal(X0b[11][0])+15.33*cimag(b3[14*2+6]/b3[14*2+7])*I;
+X0b[15][0]=creal(X0b[15][0])+15.33*cimag(b3[14*3+8]/b3[14*3+9])*I;
+X0b[18][0]=creal(X0b[18][0])+15.33*cimag(b3[14*4+10]/b3[14*4+11])*I;
+X0b[20][0]=creal(X0b[20][0])+15.33*cimag(b3[14*5+12]/b3[14*5+13])*I;
+
+
+printf("the X0b0 is %f+%f*i\n",creal(X0b[0][0]),cimag(X0b[0][0]));
+printf("the X0b1 is %f+%f*i\n",creal(X0b[6][0]),cimag(X0b[6][0]));
+printf("the X0b2 is %f+%f*i\n",creal(X0b[11][0]),cimag(X0b[11][0]));
+printf("the X0b3 is %f+%f*i\n",creal(X0b[15][0]),cimag(X0b[15][0]));
+printf("the X0b4 is %f+%f*i\n",creal(X0b[18][0]),cimag(X0b[18][0]));
+printf("the X0b5 is %f+%f*i\n",creal(X0b[20][0]),cimag(X0b[20][0]));
+
+printf("the X0 is %f+%f*i\n",creal(X0b[1][0]),cimag(X0b[1][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[2][0]),cimag(X0b[2][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[3][0]),cimag(X0b[3][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[4][0]),cimag(X0b[4][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[5][0]),cimag(X0b[5][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[7][0]),cimag(X0b[7][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[8][0]),cimag(X0b[8][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[9][0]),cimag(X0b[9][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[10][0]),cimag(X0b[10][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[12][0]),cimag(X0b[12][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[13][0]),cimag(X0b[13][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[14][0]),cimag(X0b[14][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[16][0]),cimag(X0b[16][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[17][0]),cimag(X0b[17][0]));
+printf("the X0 is %f+%f*i\n",creal(X0b[19][0]),cimag(X0b[19][0]));
+
+printf("the Rg is %f\n",Rg);
+
+
+
+}
+else
+    printf("wrong1");
+
+
+//////////////////////////////输出矩阵//////////////////////////////////////////
+
+
+
+ xil_printf("------The test is end!------\n\r");
+
+//////////////////////////////////////////////////////////////////
+
+
+       if(line_flag==0)
+			   {
+			UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_12X20 );
+
+			  sprintf(str,"ABC(Re):\n\
+					  %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f\n\
+					  ABC(Im):\n\
+					  %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f\n\
+					  Rg=%3.2f"\
+					  ,creal(Zfou[0][0]),creal(Zfou[3][0]),creal(Zfou[5][0])\
+					  ,creal(Zfou[3][0]),creal(Zfou[1][0]),creal(Zfou[4][0])\
+					  ,creal(Zfou[5][0]),creal(Zfou[4][0]),creal(Zfou[2][0])\
+					  ,cimag(Zfou[0][0]),cimag(Zfou[3][0]),cimag(Zfou[5][0])\
+					  ,cimag(Zfou[3][0]),cimag(Zfou[1][0]),cimag(Zfou[4][0])\
+					  ,cimag(Zfou[5][0]),cimag(Zfou[4][0]),cimag(Zfou[2][0])\
+					  ,Rg
+			  );
+
+			  UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+			   }
+
+			   else if(line_flag==1)
+			   {
+			UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_10X16 );
+			 			  sprintf(str,"ABC(Re):\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  ABC(Im):\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  %3.2f %3.2f %3.2f %3.2f %3.2f %3.2f\n\
+					  Rg=%3.2f"\
+
+					,creal(X0b[0][0]),creal(X0b[1][0]),creal(X0b[2][0]),creal(X0b[3][0]),creal(X0b[4][0]),creal(X0b[5][0])\
+					,creal(X0b[1][0]),creal(X0b[6][0]),creal(X0b[7][0]),creal(X0b[8][0]),creal(X0b[9][0]),creal(X0b[10][0])\
+					,creal(X0b[2][0]),creal(X0b[7][0]),creal(X0b[11][0]),creal(X0b[12][0]),creal(X0b[13][0]),creal(X0b[14][0])\
+					,creal(X0b[3][0]),creal(X0b[8][0]),creal(X0b[12][0]),creal(X0b[15][0]),creal(X0b[16][0]),creal(X0b[17][0])\
+					,creal(X0b[4][0]),creal(X0b[9][0]),creal(X0b[13][0]),creal(X0b[16][0]),creal(X0b[18][0]),creal(X0b[19][0])\
+					,creal(X0b[5][0]),creal(X0b[10][0]),creal(X0b[14][0]),creal(X0b[17][0]),creal(X0b[19][0]),creal(X0b[20][0])\
+					 ,cimag(X0b[0][0]),cimag(X0b[1][0]),cimag(X0b[2][0]),cimag(X0b[3][0]),cimag(X0b[4][0]),cimag(X0b[5][0])\
+					,cimag(X0b[1][0]),cimag(X0b[6][0]),cimag(X0b[7][0]),cimag(X0b[8][0]),cimag(X0b[9][0]),cimag(X0b[10][0])\
+					,cimag(X0b[2][0]),cimag(X0b[7][0]),cimag(X0b[11][0]),cimag(X0b[12][0]),cimag(X0b[13][0]),cimag(X0b[14][0])\
+					,cimag(X0b[3][0]),cimag(X0b[8][0]),cimag(X0b[12][0]),cimag(X0b[15][0]),cimag(X0b[16][0]),cimag(X0b[17][0])\
+					,cimag(X0b[4][0]),cimag(X0b[9][0]),cimag(X0b[13][0]),cimag(X0b[16][0]),cimag(X0b[18][0]),cimag(X0b[19][0])\
+					,cimag(X0b[5][0]),cimag(X0b[10][0]),cimag(X0b[14][0]),cimag(X0b[17][0]),cimag(X0b[19][0]),cimag(X0b[20][0])\
+					,Rg
+			  );
+
+			  UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+			   }
+
+			   else
+			   {
+				sprintf(str,"wrong");
+			  UG_TextboxSetText( &window_1, BTN_ID_14, str );break;
+			   }
+
+			case BTN_ID_15: /*re*/
+            {
+            	xianshi_i=0;
+				UG_TextboxSetText( &window_1, BTN_ID_13, "length:" );
+				break;
+            }
+
+			   break;
+            }
+
+         }
+      }
+   }
+}
+
+
+void PixelSet(UG_S16 x , UG_S16 y ,UG_COLOR c)
+{
+	u32 iPixelAddr;
+	iPixelAddr = y * 1920  + x;
+	cpFrames[iPixelAddr] = c;
+}
+static void Timer_Handler(void *CallBackRef)
+
+{
+    XScuTimer *TimerInstancePtr = (XScuTimer *) CallBackRef;
+    XScuTimer_ClearInterruptStatus(TimerInstancePtr);
+    XScuTimer_DisableInterrupt(TimerInstancePtr);
+
+    if (touch_sig==1)
+    {
+    	touch_i2c_read_bytes(ReadBuffer, 0, 20);
+    	touch_sig=0;
+    	if((ReadBuffer[3] & 0xc0)==0x00)
+    	{
+    		current_x1=((ReadBuffer[3]&0x3f)<<8) + ReadBuffer[4];
+    		current_y1=((ReadBuffer[5]&0x3f)<<8) + ReadBuffer[6];
+    		UG_TouchUpdate(current_x1,current_y1,TOUCH_STATE_PRESSED);
+
+    	}
+    	else if((ReadBuffer[3] & 0xc0)==0x40)
+    	{
+    		UG_TouchUpdate(-1,-1,TOUCH_STATE_RELEASED);
+    	}
+
+    }
+   UG_Update();
+   Xil_DCacheFlushRange((unsigned int) dispCtrl.framePtr[dispCtrl.curFrame], DEMO_MAX_FRAME);
+   XScuTimer_EnableInterrupt(TimerInstancePtr);
+}
+int main(void)
+{
+
+	int Status;
+
+	int i;
+	XAxiVdma_Config *vdmaConfig;
+
+	/*
+	 * Initialize an array of pointers to the 3 frame buffers
+	 */
+	for (i = 0; i < DISPLAY_NUM_FRAMES; i++)
+	{
+		pFrames[i] = frameBuf[i];
+	}
+	InterruptInit(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+	touch_init();
+	PS_timer_init(&Timer, XPAR_XSCUTIMER_0_DEVICE_ID ,343 * 10000 - 1);
+	InterruptConnect(XPAR_SCUTIMER_INTR,(void *)&Timer,Timer_Handler);
+	XScuTimer_EnableInterrupt(&Timer);
+	/*
+	 * Initialize VDMA driver
+	 */
+	vdmaConfig = XAxiVdma_LookupConfig(VGA_VDMA_ID);
+	if (!vdmaConfig)
+	{
+		xil_printf("No video DMA found for ID %d\r\n", VGA_VDMA_ID);
+
+	}
+	Status = XAxiVdma_CfgInitialize(&vdma, vdmaConfig, vdmaConfig->BaseAddress);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("VDMA Configuration Initialization failed %d\r\n", Status);
+
+	}
+
+	/*
+	 * Initialize the Display controller and start it
+	 */
+	Status = DisplayInitialize(&dispCtrl, &vdma, DISP_VTC_ID, DYNCLK_BASEADDR, pFrames, DEMO_STRIDE);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Display Ctrl initialization failed during demo initialization%d\r\n", Status);
+
+	}
+	Status = DisplayStart(&dispCtrl);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Couldn't start display during demo initialization%d\r\n", Status);
+
+	}
+
+	cpFrames =(u32 *)dispCtrl.framePtr[dispCtrl.curFrame];
+		UG_Init(&gui , PixelSet, 800 , 480);
+		UG_FillScreen ( 0xFF0000 );
+		UG_DrawCircle(100 , 100 , 30 , C_WHITE) ;
+		Xil_DCacheFlushRange((unsigned int) dispCtrl.framePtr[dispCtrl.curFrame], DEMO_MAX_FRAME);
+		   /* Create Window 1 */
+		   UG_WindowCreate( &window_1, obj_buff_wnd_1, MAX_OBJECTS, window_1_callback );
+		   UG_WindowSetTitleText( &window_1, "Xi'an Jiatong University" );
+		   UG_WindowSetTitleTextFont( &window_1, &FONT_12X20 );
+
+		   /* Create some Buttons */
+		   UG_ButtonCreate( &window_1, &button1_0, BTN_ID_0, 10, 301, 77, 368 );
+		   UG_ButtonCreate( &window_1, &button1_1, BTN_ID_1, 10, 229, 77, 296 );
+		   UG_ButtonCreate( &window_1, &button1_2, BTN_ID_2, 82, 229, 149, 296 );
+		   UG_ButtonCreate( &window_1, &button1_3, BTN_ID_3, 154, 229, 221,296 );
+		   UG_ButtonCreate( &window_1, &button1_4, BTN_ID_4, 10, 157, 77 , 224 );
+		   UG_ButtonCreate( &window_1, &button1_5, BTN_ID_5, 82, 157, 149, 224 );
+		   UG_ButtonCreate( &window_1, &button1_6, BTN_ID_6, 154, 157,221, 224 );
+
+		   UG_ButtonCreate( &window_1, &button1_7, BTN_ID_7, 10, 85, 77, 152 );
+		   UG_ButtonCreate( &window_1, &button1_8, BTN_ID_8, 82, 85, 149, 152 );
+		   UG_ButtonCreate( &window_1, &button1_9, BTN_ID_9, 154, 85, 221, 152 );
+		   UG_ButtonCreate( &window_1, &button1_10, BTN_ID_10, 82, 301, 149,368 );
+		   UG_ButtonCreate( &window_1, &button1_11, BTN_ID_11, 10, 373, 149 , 440 );
+		   UG_ButtonCreate( &window_1, &button1_12, BTN_ID_12, 154, 301, 221, 368 );
+		   UG_ButtonCreate( &window_1, &button1_13, BTN_ID_15, 154, 373, 221, 440 );
+
+		   UG_ButtonCreate( &window_1, &button1_14, BTN_ID_16, 231, 373, 780, 440 );
+
+		   UG_TextboxCreate( &window_1, &textbox_0, BTN_ID_13, 10, 10, 221 , 77 );
+		   UG_TextboxCreate( &window_1, &textbox_1, BTN_ID_14, 231, 10, 780, 368 );
+
+
+
+
+		   /* Configure Button 0 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_0, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_0, "0" );
+		   /* Configure Button 1 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_1, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_1, "1" );
+		   /* Configure Button 2 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_2, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_2, "2" );
+		   /* Configure Button 3 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_3, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_3, "3" );
+		   /* Configure Button 4 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_4, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_4, "4" );
+		   /* Configure Button 5 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_5, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_5, "5" );
+
+		   /* Configure Button 6 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_6, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_6, "6" );
+		   /* Configure Button 7 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_7, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_7, "7" );
+		   /* Configure Button 8 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_8, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_8, "8" );
+		   /* Configure Button 9 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_9, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_9, "9" );
+		   /* Configure Button 10 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_10, &FONT_12X20 );
+		   UG_ButtonSetText( &window_1, BTN_ID_10, "." );
+
+
+		   /* Configure Button 11 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_11, &FONT_12X20 );
+		   UG_ButtonSetBackColor( &window_1, BTN_ID_11, C_LIME );
+		   UG_ButtonSetText( &window_1, BTN_ID_11, "single" );
+		   /* Configure Button 12 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_12, &FONT_12X20 );
+		   UG_ButtonSetBackColor( &window_1, BTN_ID_12, C_RED );
+		   UG_ButtonSetText( &window_1, BTN_ID_12, "ok" );
+
+
+		   /* Configure Button 15 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_15, &FONT_12X20 );
+		   UG_ButtonSetBackColor( &window_1, BTN_ID_15, C_BLUE );
+		   UG_ButtonSetText( &window_1, BTN_ID_15, "re" );
+
+		   /* Configure Button 16 */
+		   UG_ButtonSetFont( &window_1, BTN_ID_16, &FONT_12X20 );
+		   //UG_ButtonSetBackColor( &window_1, BTN_ID_16, C_BLUE );
+		   UG_ButtonSetText( &window_1, BTN_ID_16, "=>120" );
+
+
+		   /* Configure textox 13 */
+		   UG_TextboxShow ( &window_1 , BTN_ID_13 );
+		   UG_TextboxSetFont( &window_1, BTN_ID_13, &FONT_12X20 );
+		   UG_TextboxSetText( &window_1, BTN_ID_13, "length:" );
+		   /* Configure textbox 14 */
+		   UG_TextboxShow ( &window_1 , BTN_ID_14 );
+		   UG_TextboxSetFont( &window_1, BTN_ID_14, &FONT_12X20 );
+		   UG_TextboxSetText( &window_1, BTN_ID_14, "parameter of the line:" );
+
+
+		   UG_WindowShow( &window_1 );
+		   UG_WaitForUpdate();
+
+		while(1){
+			  }
+
+	return 0;
+}
+
+
+

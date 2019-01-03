@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<wave_config>
+	<wave_state>
+	</wave_state>
+	<db_ref_list>
+		<db_ref path="D:/FPGA/V_project/final_2/lcd7_touch.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1" type="auto">
+			<top_modules>
+				<top_module name="top">
+				</top_module>
+			</top_modules>
+		</db_ref>
+	</db_ref_list>
+	<WVObjectSize size="8">
+	</WVObjectSize>
+	<wvobject fp_name="system_i/pwm_0/inst/duty_r" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/pwm_0/inst/duty_r[15:0]</obj_property>
+		<obj_property name="ObjectShortName">system_i/pwm_0/inst/duty_r[15:0]</obj_property>
+	</wvobject>
+	<wvobject fp_name="system_i/pwm_0/inst/period_cnt" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/pwm_0/inst/period_cnt[15:0]</obj_property>
+		<obj_property name="ObjectShortName">system_i/pwm_0/inst/period_cnt[15:0]</obj_property>
+	</wvobject>
+	<wvobject fp_name="system_i/pwm_0/inst/period_r" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/pwm_0/inst/period_r[15:0]</obj_property>
+		<obj_property name="ObjectShortName">system_i/pwm_0/inst/period_r[15:0]</obj_property>
+	</wvobject>
+	<wvobject fp_name="system_i/blk_mem_gen_0_doutb" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/blk_mem_gen_0_doutb[31:0]</obj_property>
+		<obj_property name="ObjectShortName">system_i/blk_mem_gen_0_doutb[31:0]</obj_property>
+	</wvobject>
+	<wvobject fp_name="system_i/fft_reset1_0_relay" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/fft_reset1_0_relay[8:0]</obj_property>
+		<obj_property name="ObjectShortName">system_i/fft_reset1_0_relay[8:0]</obj_property>
+	</wvobject>
+	<wvobject fp_name="system_i/w_ram_0_dina" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/w_ram_0_dina[31:0]</obj_property>
+		<obj_property name="ObjectShortName">system_i/w_ram_0_dina[31:0]</obj_property>
+	</wvobject>
+	<wvobject fp_name="system_i/pwm_0/inst/pwm_r" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/pwm_0/inst/pwm_r</obj_property>
+		<obj_property name="ObjectShortName">system_i/pwm_0/inst/pwm_r</obj_property>
+	</wvobject>
+	<wvobject fp_name="system_i/w_ram_0_ram_done" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">system_i/w_ram_0_ram_done</obj_property>
+		<obj_property name="ObjectShortName">system_i/w_ram_0_ram_done</obj_property>
+	</wvobject>
+</wave_config>
+

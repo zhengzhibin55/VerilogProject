@@ -1,0 +1,27 @@
+
+#include "xil_types.h"
+#include <stdio.h>
+#include <math.h>
+#include "xparameters.h"
+#include "xil_io.h"
+#include<complex.h>
+#include"D:\study\c\la\complex_matric.h"
+
+int main()
+{
+	printf("test is over");
+    return 0;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
